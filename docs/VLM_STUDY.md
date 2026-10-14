@@ -44,23 +44,25 @@ These commands can download approximately 2 GB of model weights and may be slow 
 | Tesseract OCR + field rules | Synthetic held-out test | 64 | 320 | 320 | **100%** |
 | Tesseract OCR + field rules | 10-image pilot subset | 10 | 50 | 50 | **100%** |
 | Pretrained SmolVLM2-500M | Same 10-image pilot subset | 10 | 50 | 40 | **80%** |
-| Pretrained SmolVLM2-500M | Full held-out test | 64 | 320 | **Not run** | **Not measured** |
+| Pretrained SmolVLM2-500M | Full held-out test | 64 | 320 | **240** | **75%** |
 | SmolVLM2 + LoRA | — | — | — | **Not run** | **Not measured** |
 
-The **10-image pilot** values were observed in actual Windows evaluation runs and reported by the project operator. The VLM pilot output is generated locally at `reports/multimodal/vlm_test_10.json`; it is not included in the distributed project archive. Preserve and include that measured JSON when presenting a reproducible 10-image experiment; do not fabricate per-field predictions.
+The **full 64-image evaluation** was completed in a Windows experiment run and displayed in the desktop comparison screen, using `ocr_test_64.json` and `vlm_test_64.json`. The captured screen shows OCR **320/320 (100%)** and SmolVLM2 **240/320 (75%)**, a 25.0 percentage-point difference. The older 10-image pilot is retained for experiment history but is **not** the headline comparison.
 
-The 20-percentage-point pilot difference is exploratory. The test is small, synthetic, legible and templated; the OCR baseline uses template-aware field parsing. **Neither result measures detection of genuine financial fraud or generalization to real-world documents.**
+For reproducible publication, preserve the unmodified `reports/multimodal/vlm_test_64.json` file from the completed experiment and include it alongside the OCR report. **Do not reconstruct or invent the model's individual predictions** based on the screenshot. Run `multimodal.compare` to verify identical ordered image IDs across both complete runs.
 
-## Fair full-set comparison
+**Interpretation:** The generator's highly regular templates favor the task-specific OCR + parsing baseline. No data here establishes a general advantage over VLMs, real-world document authenticity, fraud detection or external-domain performance.
 
-For a fair 64-image comparison, run both methods on the entire same held-out set, then analyze per-field accuracy, answer coverage, latency, and errors:
+## Validate the completed full-set comparison
+
+With both saved full-set JSON reports present, check their matching image IDs, per-field accuracy and latency. The comparison command below reads results without running inference. To repeat the experiment independently, rerun the evaluator with the same split and settings:
 
 ```powershell
 .\.venv\Scripts\python.exe -m multimodal.evaluate --method vlm --split test
 .\.venv\Scripts\python.exe -m multimodal.compare --ocr reports/multimodal/ocr_test_64.json --vlm reports/multimodal/vlm_test_64.json
 ```
 
-The interactive **Multimodal Comparison** tab can also compare the two measured JSON files on their **shared image IDs only**; it never infers missing VLM results. See [Visual Comparison](VISUAL_COMPARISON.md) and [LoRA proposal](LORA_PROTOCOL.md).
+The interactive **Multimodal Comparison** tab displays the full 64-image paired result, raw per-document answers, color-coded mistakes, and per-field scores. It matches **shared image IDs only** and never infers missing VLM results. See [Visual Comparison](VISUAL_COMPARISON.md) and [LoRA proposal](LORA_PROTOCOL.md).
 
 ## Limitations and next steps
 

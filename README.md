@@ -27,17 +27,20 @@ FraudFlow Vision demonstrates an end-to-end **synthetic document alteration scre
 
 The VQA benchmark asks **five questions per image**: document type, date, printed total, payment reference, and subtotal-plus-tax arithmetic consistency. The expected answers are derived from the **synthetic document generator**, never supplied to either inference method. Both methods use the same image files; the VLM receives image-plus-text questions, while the OCR baseline parses recognized text with field rules.
 
-### Measured results (distinct experiments)
+### Measured visual question-answering results — full held-out test
 
-| Experiment | Documents | Question answers | Exact match |
+Two independently executed pipelines were evaluated on the **same 64 held-out synthetic receipt/invoice images**, with **five questions per image**. The expected answers come from the document generator and are used for scoring only.
+
+| Method | Documents | Correct / evaluated answers | Micro exact-match accuracy |
 |---|---:|---:|---:|
-| Tesseract OCR, full synthetic held-out set | 64 | 320 | **320/320 (100%)** |
-| Tesseract OCR, 10-image pilot subset | 10 | 50 | **50/50 (100%)** |
-| Pretrained SmolVLM2-500M, same 10-image pilot subset | 10 | 50 | **40/50 (80%)** |
+| Tesseract OCR + field rules | 64 | **320/320** | **100%** |
+| Pretrained SmolVLM2-500M | 64 | **240/320** | **75%** |
 
-**Interpretation:** The **20-percentage-point difference** is an *exploratory observation on only 10 highly regular synthetic images*, not a full-benchmark conclusion. The VLM has **not yet been evaluated on all 64 held-out images**. The Tesseract system uses dataset-specific extraction rules and is particularly well suited to these templates. Neither test measures real-world fraud detection, and **LoRA fine-tuning has not been performed**.
+**Observed difference:** OCR achieved **25.0 percentage points** higher exact-match accuracy on this fixed synthetic test set. A prior **10-image pilot** scored OCR 50/50 (100%) and SmolVLM2 40/50 (80%); those pilot results should **not** replace the full-set results above.
 
-For a publishable 64-image comparison, run both methods on the full matching test set and report per-question errors, latency, and uncertainty. The program does not invent missing VLM results.
+These full-set results were displayed by the desktop comparison tool using the locally generated `reports/multimodal/ocr_test_64.json` and `reports/multimodal/vlm_test_64.json` files. **Include the two original report files when publishing reproducible results**; do not substitute invented predictions or treat the screenshot as equivalent to raw evidence. You can validate the reports and their aligned document IDs with `python -m multimodal.compare` (command below).
+
+**Important limitation:** These are highly regular fictional documents and five fixed field-reading questions. The OCR baseline uses dataset-aware extraction rules, so its perfect score does **not** imply perfect OCR on real-world documents. These figures are **not fraud-detection accuracy**. No LoRA/QLoRA fine-tuning was performed.
 
 ### Interactive desktop comparison
 
@@ -48,11 +51,11 @@ The **Multimodal Comparison** tab reads saved OCR and VLM result JSON files. It 
 - Green/red correctness indicators, raw predictions, and per-question accuracy summaries.
 - A filter for VLM errors, larger image viewing, and CSV export.
 
-The tab evaluates **shared document IDs** only (e.g., 10 VLM documents against those same 10 OCR documents). **It does not rerun or download the VLM when you open it.**
+The tab evaluates **only shared document IDs**, and the displayed full-set screenshot pairs the **64 OCR and 64 VLM test images**. It does **not** rerun or download the VLM when opened.
 
-![Multimodal Comparison application tab](screenshots/multimodal-comparison.png)
+![Actual FraudFlow desktop OCR (100%) versus SmolVLM2 (75%) evaluation on 64 held-out images](screenshots/multimodal-comparison.png)
 
-*Screenshot from the packaged sample, captured before the local VLM result JSON was imported. Any “NOT RUN” indicator in this screenshot is intentional; actual VLM predictions live in the user's measured `reports/multimodal/vlm_test_10.json` file and are not bundled in the release archive.*
+*Actual Windows application screenshot provided after the complete 64-image VLM run. The document inspector also shows individual answers, correctness, and a per-question breakdown. Results reflect synthetic test data only.*
 
 Run and reproduce the experiments:
 
@@ -63,9 +66,13 @@ Run and reproduce the experiments:
 # Start with a small VLM trial; downloads model weights on first run
 .\.venv\Scripts\python.exe -m multimodal.evaluate --method vlm --split test --limit 2
 
-# Run full VLM benchmark when compute/time permits
+# Reproduce the measured full VLM benchmark (requires model weights)
 .\.venv\Scripts\python.exe -m multimodal.evaluate --method vlm --split test
+# Compare saved 64-image reports without re-running inference
+.\.venv\Scripts\python.exe -m multimodal.compare --ocr reports/multimodal/ocr_test_64.json --vlm reports/multimodal/vlm_test_64.json
 ```
+
+The comparison command requires your original VLM JSON file from the completed local run; it validates that both reports cover the same ordered 64 held-out images. It also creates `reports/multimodal/comparison_test.json`.
 
 See [VLM study protocol](docs/VLM_STUDY.md), [comparison GUI guide](docs/VISUAL_COMPARISON.md), and [LoRA proposal — not executed](docs/LORA_PROTOCOL.md). The visual classifier and the optional VLM are **separate systems for separate tasks**: alteration screening vs document question answering.
 
@@ -213,7 +220,7 @@ data/manifest.csv            Ground-truth labels and bounding boxes (evaluation 
 data/demo_predictions.csv    Cached visual classifier outputs
 models/demo_model.json      Bundled trained visual classifier
 reports/                     Visual screening, OCR auditing, and VQA evaluations
-reports/multimodal/          Saved OCR/VLM runs (VLM pilot JSON generated locally)
+reports/multimodal/          Saved OCR/VLM reports (64-image VLM JSON produced locally)
 docs/                        Dataset, model, benchmark and LoRA documentation
 tests/                       unittest suite
 .github/workflows/ci.yml    GitHub Actions automated tests
