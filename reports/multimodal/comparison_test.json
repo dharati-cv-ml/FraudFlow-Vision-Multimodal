@@ -1,0 +1,30 @@
+{
+  "split": "test",
+  "documents": 64,
+  "comparison": {
+    "ocr": {
+      "model": "Tesseract OCR + deterministic parsing",
+      "micro_exact_match": 1.0,
+      "by_question": {
+        "document_type": 1.0,
+        "date": 1.0,
+        "total": 1.0,
+        "payment_reference": 1.0,
+        "arithmetic_consistency": 1.0
+      },
+      "mean_seconds_per_document": 0.149
+    },
+    "vlm": {
+      "model": "HuggingFaceTB/SmolVLM2-500M-Video-Instruct",
+      "micro_exact_match": 0.75,
+      "by_question": {
+        "document_type": 0.5,
+        "date": 0.9844,
+        "total": 0.75,
+        "payment_reference": 0.625,
+        "arithmetic_consistency": 0.8906
+      },
+      "mean_seconds_per_document": 20.803
+    }
+  }
+}
