@@ -89,10 +89,16 @@ class FraudFlowApp:
         self.inspection=tk.Frame(self.tabs,bg=BG);self.analytics=tk.Frame(self.tabs,bg=BG)
         self.explorer=tk.Frame(self.tabs,bg=BG);self.evaluation=tk.Frame(self.tabs,bg=BG)
         self.errors=tk.Frame(self.tabs,bg=BG)
+        self.multimodal=tk.Frame(self.tabs,bg=BG)
         for page,name in [(self.inspection,'Inspection Studio'),(self.analytics,'Analytics Dashboard'),
-                          (self.explorer,'Dataset Explorer'),(self.evaluation,'Model & Evaluation'),(self.errors,'Error Analysis')]:
+                          (self.explorer,'Dataset Explorer'),(self.evaluation,'Model & Evaluation'),(self.errors,'Error Analysis'),
+                          (self.multimodal,'Multimodal Comparison')]:
             self.tabs.add(page,text=name)
         self._inspection_ui();self._analytics_ui();self._explorer_ui();self._evaluation_ui();self._errors_ui()
+        from .multimodal_view import MultimodalComparisonView
+        self.multimodal_view=MultimodalComparisonView(self.multimodal)
+        self.tabs.bind('<<NotebookTabChanged>>',lambda e: self.multimodal_view.on_open()
+                       if self.tabs.select()==str(self.multimodal) else None)
 
     def _inspection_ui(self):
         self.inspection.columnconfigure(1,weight=1);self.inspection.rowconfigure(0,weight=1)
