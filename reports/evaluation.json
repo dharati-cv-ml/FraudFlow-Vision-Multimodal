@@ -1,0 +1,44 @@
+{
+  "protocol": "Train 60%; threshold selected on validation 20%; untouched test 20%.",
+  "dataset": "320 independently generated synthetic document images; not real-world financial documents",
+  "threshold": 0.36,
+  "splits": {
+    "train": {
+      "total": 192,
+      "tp": 77,
+      "tn": 75,
+      "fp": 21,
+      "fn": 19,
+      "precision": 0.7857,
+      "recall": 0.8021,
+      "f1": 0.7938,
+      "accuracy": 0.7917,
+      "specificity": 0.7812
+    },
+    "validation": {
+      "total": 64,
+      "tp": 26,
+      "tn": 27,
+      "fp": 5,
+      "fn": 6,
+      "precision": 0.8387,
+      "recall": 0.8125,
+      "f1": 0.8254,
+      "accuracy": 0.8281,
+      "specificity": 0.8438
+    },
+    "test": {
+      "total": 64,
+      "tp": 25,
+      "tn": 23,
+      "fp": 9,
+      "fn": 7,
+      "precision": 0.7353,
+      "recall": 0.7812,
+      "f1": 0.7576,
+      "accuracy": 0.75,
+      "specificity": 0.7188
+    }
+  },
+  "limitations": "These are synthetic patch-artifact recognition results, not reliable real-world fraud detection."
+}

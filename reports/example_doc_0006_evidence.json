@@ -1,0 +1,24 @@
+{
+  "sample": "doc_0006.jpg",
+  "source": "Bundled synthetic receipt; altered total",
+  "visual_score": 0.752708,
+  "visual_decision": "REVIEW",
+  "pixel_derived_candidate_hot_zone": [
+    476,
+    746,
+    648,
+    800
+  ],
+  "visual_evidence": "Largest non-divider horizontal paper-edge response: 76 pixels; largest vertical response: 22 pixels. Highlight is a diagnostic hot-zone, not proof of manipulation.",
+  "ocr_arithmetic": {
+    "status": "MISMATCH",
+    "subtotal": "271.53",
+    "tax": "19.01",
+    "printed_total": "351.54",
+    "expected_total": "290.54",
+    "difference": "+61.00",
+    "message": "Arithmetic mismatch: printed total differs from subtotal + tax."
+  },
+  "combined_decision": "REVIEW",
+  "warning": "Synthetic evidence; not a conclusion of actual fraud."
+}

@@ -1,0 +1,819 @@
+{
+  "method": "vlm",
+  "split": "test",
+  "model": "HuggingFaceTB/SmolVLM2-500M-Video-Instruct",
+  "evaluation": {
+    "documents": 64,
+    "question_answers": 320,
+    "micro_exact_match": 0.75,
+    "by_question": {
+      "document_type": {
+        "exact_match_accuracy": 0.5,
+        "answer_coverage": 1.0,
+        "correct": 32,
+        "total": 64,
+        "answered": 64
+      },
+      "date": {
+        "exact_match_accuracy": 0.9844,
+        "answer_coverage": 1.0,
+        "correct": 63,
+        "total": 64,
+        "answered": 64
+      },
+      "total": {
+        "exact_match_accuracy": 0.75,
+        "answer_coverage": 1.0,
+        "correct": 48,
+        "total": 64,
+        "answered": 64
+      },
+      "payment_reference": {
+        "exact_match_accuracy": 0.625,
+        "answer_coverage": 0.9688,
+        "correct": 40,
+        "total": 64,
+        "answered": 62
+      },
+      "arithmetic_consistency": {
+        "exact_match_accuracy": 0.8906,
+        "answer_coverage": 1.0,
+        "correct": 57,
+        "total": 64,
+        "answered": 64
+      }
+    }
+  },
+  "mean_seconds_per_document": 20.803,
+  "limitations": "Synthetic generator-derived answer key; no real-world generalization claims. VQA measures printed fields, not authenticity or fraud.",
+  "predictions": [
+    {
+      "file": "images/doc_0256.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-08-14",
+        "total": "234.14",
+        "payment_reference": "ACCT-63381",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 19.0,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-08-14\",\n    \"total\": \"234.14\",\n    \"payment_reference\": \"ACCT-63381\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0257.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-03-04",
+        "total": "248.56",
+        "payment_reference": "ACCT-11049",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 18.304,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-03-04\",\n    \"total\": \"248.56\",\n    \"payment_reference\": \"ACCT-11049\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0258.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-04-04",
+        "total": "471.00",
+        "payment_reference": "ACCT-12345",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 17.333,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-04-04\",\n    \"total\": \"471.00\",\n    \"payment_reference\": \"ACCT-12345\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0259.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-05-11",
+        "total": "139.51",
+        "payment_reference": "ACCT-12345",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 17.54,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-05-11\",\n    \"total\": \"139.51\",\n    \"payment_reference\": \"ACCT-12345\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0260.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-05-29",
+        "total": "314.98",
+        "payment_reference": "ACCT-71575",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 17.022,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-05-29\",\n    \"total\": \"314.98\",\n    \"payment_reference\": \"ACCT-71575\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0261.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-01-30",
+        "total": "378.72",
+        "payment_reference": "ACCT-59367",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 16.923,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-01-30\",\n    \"total\": \"378.72\",\n    \"payment_reference\": \"ACCT-59367\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0262.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-05-21",
+        "total": "23.69",
+        "payment_reference": "ACCT-29276",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 17.128,
+      "raw_output": " {\n  \"document_type\": \"receipt\",\n  \"date\": \"2026-05-21\",\n  \"total\": \"23.69\",\n  \"payment_reference\": \"ACCT-29276\",\n  \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0263.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-07-21",
+        "total": "193.34",
+        "payment_reference": "ACCT-28518",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 17.368,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-07-21\",\n    \"total\": \"193.34\",\n    \"payment_reference\": \"ACCT-28518\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0264.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-02-10",
+        "total": "214.60",
+        "payment_reference": "ACCT-778407",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.833,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-02-10\",\n    \"total\": \"214.60\",\n    \"payment_reference\": \"ACCT-778407\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0265.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-05-19",
+        "total": "142.09",
+        "payment_reference": "ACCT-40709",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 22.406,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-05-19\",\n    \"total\": \"142.09\",\n    \"payment_reference\": \"ACCT-40709\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0266.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-07-10",
+        "total": "189.13",
+        "payment_reference": "ACCT-82077",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.869,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-07-10\",\n    \"total\": \"189.13\",\n    \"payment_reference\": \"ACCT-82077\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0267.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-07-25",
+        "total": "202.59",
+        "payment_reference": "ACCT-484849",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.278,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-07-25\",\n    \"total\": \"202.59\",\n    \"payment_reference\": \"ACCT-484849\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0268.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-05-30",
+        "total": "472.63",
+        "payment_reference": "ACCT-46657",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.633,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-05-30\",\n    \"total\": \"472.63\",\n    \"payment_reference\": \"ACCT-46657\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0269.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-03-22",
+        "total": "205.19",
+        "payment_reference": "ACCT-69424",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.363,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-03-22\",\n    \"total\": \"205.19\",\n    \"payment_reference\": \"ACCT-69424\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0270.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-01-26",
+        "total": "189.39",
+        "payment_reference": "ACCT-12345",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.299,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-01-26\",\n    \"total\": \"189.39\",\n    \"payment_reference\": \"ACCT-12345\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0271.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-10-12",
+        "total": "138.73",
+        "payment_reference": "ACCT-21444",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.434,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-10-12\",\n    \"total\": \"138.73\",\n    \"payment_reference\": \"ACCT-21444\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0272.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-06-17",
+        "total": "339.74",
+        "payment_reference": "ACCT-93694",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.388,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-06-17\",\n    \"total\": \"339.74\",\n    \"payment_reference\": \"ACCT-93694\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0273.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-08-03",
+        "total": "321.88",
+        "payment_reference": "ACCT-49465",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.025,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-08-03\",\n    \"total\": \"321.88\",\n    \"payment_reference\": \"ACCT-49465\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0274.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-09-01",
+        "total": "232.83",
+        "payment_reference": "ACCT-12345",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.091,
+      "raw_output": " {\n  \"document_type\": \"receipt\",\n  \"date\": \"2026-09-01\",\n  \"total\": \"232.83\",\n  \"payment_reference\": \"ACCT-12345\",\n  \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0275.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-02-15",
+        "total": "40.26",
+        "payment_reference": "ACCT-422184",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.11,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-02-15\",\n    \"total\": \"40.26\",\n    \"payment_reference\": \"ACCT-422184\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0276.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-05-04",
+        "total": "323.63",
+        "payment_reference": "ACCT-12345",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.175,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-05-04\",\n    \"total\": \"323.63\",\n    \"payment_reference\": \"ACCT-12345\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0277.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-01-30",
+        "total": "236.31",
+        "payment_reference": "ACCT-38753",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.397,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-01-30\",\n    \"total\": \"236.31\",\n    \"payment_reference\": \"ACCT-38753\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0278.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-06-17",
+        "total": "421.49",
+        "payment_reference": "ACCT-44722",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.227,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-06-17\",\n    \"total\": \"421.49\",\n    \"payment_reference\": \"ACCT-44722\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0279.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-01-12",
+        "total": "148.87",
+        "payment_reference": "ACCT-403867",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.135,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-01-12\",\n    \"total\": \"148.87\",\n    \"payment_reference\": \"ACCT-403867\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0280.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-08-18",
+        "total": "279.69",
+        "payment_reference": "ACCT-25126",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.698,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-08-18\",\n    \"total\": \"279.69\",\n    \"payment_reference\": \"ACCT-25126\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0281.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-07-14",
+        "total": "299.47",
+        "payment_reference": "ACCT-57690",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.496,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-07-14\",\n    \"total\": \"299.47\",\n    \"payment_reference\": \"ACCT-57690\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0282.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-02-28",
+        "total": "442.42",
+        "payment_reference": "ACCT-12345",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.368,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-02-28\",\n    \"total\": \"442.42\",\n    \"payment_reference\": \"ACCT-12345\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0283.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-01-19",
+        "total": "149.16",
+        "payment_reference": "ACCT-527709",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.574,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-01-19\",\n    \"total\": \"149.16\",\n    \"payment_reference\": \"ACCT-527709\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0284.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-05-21",
+        "total": "141.05",
+        "payment_reference": "ACCT-25899",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.57,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-05-21\",\n    \"total\": \"141.05\",\n    \"payment_reference\": \"ACCT-25899\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0285.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-06-14",
+        "total": "152.36",
+        "payment_reference": "ACCT-23647",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.418,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-06-14\",\n    \"total\": \"152.36\",\n    \"payment_reference\": \"ACCT-23647\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0286.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-05-02",
+        "total": "196.81",
+        "payment_reference": "ACCT-12345",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.423,
+      "raw_output": " {\n  \"document_type\": \"receipt\",\n  \"date\": \"2026-05-02\",\n  \"total\": \"196.81\",\n  \"payment_reference\": \"ACCT-12345\",\n  \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0287.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-02-14",
+        "total": "43.81",
+        "payment_reference": "ACCT-12345",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 20.954,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-02-14\",\n    \"total\": \"43.81\",\n    \"payment_reference\": \"ACCT-12345\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0288.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-01-25",
+        "total": "136.40",
+        "payment_reference": "ACCT-223479",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.324,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-01-25\",\n    \"total\": \"136.40\",\n    \"payment_reference\": \"ACCT-223479\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0289.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-08-13",
+        "total": "472.38",
+        "payment_reference": "ACCT-12345",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.238,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-08-13\",\n    \"total\": \"472.38\",\n    \"payment_reference\": \"ACCT-12345\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0290.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-05-23",
+        "total": "497.29",
+        "payment_reference": "ACCT-36202",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.435,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-05-23\",\n    \"total\": \"497.29\",\n    \"payment_reference\": \"ACCT-36202\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0291.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-03-18",
+        "total": "161.08",
+        "payment_reference": "ACCT-4455",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.894,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-03-18\",\n    \"total\": \"161.08\",\n    \"payment_reference\": \"ACCT-4455\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0292.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-03-18",
+        "total": "184.82",
+        "payment_reference": "ACCT-62357",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.252,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-03-18\",\n    \"total\": \"184.82\",\n    \"payment_reference\": \"ACCT-62357\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0293.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-07-02",
+        "total": "135.40",
+        "payment_reference": "ACCT-28218",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.329,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-07-02\",\n    \"total\": \"135.40\",\n    \"payment_reference\": \"ACCT-28218\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0294.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-02-24",
+        "total": "410.16",
+        "payment_reference": "ACCT-41107",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.369,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-02-24\",\n    \"total\": \"410.16\",\n    \"payment_reference\": \"ACCT-41107\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0295.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-01-20",
+        "total": "86.41",
+        "payment_reference": "ACCT-9526",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.327,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-01-20\",\n    \"total\": \"86.41\",\n    \"payment_reference\": \"ACCT-9526\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0296.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2020-01-24",
+        "total": "455.93",
+        "payment_reference": "ACCT-84798",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 20.839,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2020-01-24\",\n    \"total\": \"455.93\",\n    \"payment_reference\": \"ACCT-84798\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0297.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-05-13",
+        "total": "126.46",
+        "payment_reference": "ACCT-816300",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.247,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-05-13\",\n    \"total\": \"126.46\",\n    \"payment_reference\": \"ACCT-816300\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0298.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-04-17",
+        "total": "496.91",
+        "payment_reference": "ACCT-37596",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.041,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-04-17\",\n    \"total\": \"496.91\",\n    \"payment_reference\": \"ACCT-37596\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0299.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-01-03",
+        "total": "296.29",
+        "payment_reference": "ACCT-72156",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 20.864,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-01-03\",\n    \"total\": \"296.29\",\n    \"payment_reference\": \"ACCT-72156\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0300.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-05-21",
+        "total": "327.33",
+        "payment_reference": "ACCT-77375",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 20.771,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-05-21\",\n    \"total\": \"327.33\",\n    \"payment_reference\": \"ACCT-77375\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0301.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-01-18",
+        "total": "18.82",
+        "payment_reference": "ACCT-91083",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.171,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-01-18\",\n    \"total\": \"18.82\",\n    \"payment_reference\": \"ACCT-91083\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0302.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-06-21",
+        "total": "504.32",
+        "payment_reference": "ACCT-34909",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.122,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-06-21\",\n    \"total\": \"504.32\",\n    \"payment_reference\": \"ACCT-34909\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0303.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-01-30",
+        "total": "259.58",
+        "payment_reference": "ACCT-36880",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.022,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-01-30\",\n    \"total\": \"259.58\",\n    \"payment_reference\": \"ACCT-36880\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0304.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-04-15",
+        "total": "20.61",
+        "payment_reference": "ACCT-12345",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.034,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-04-15\",\n    \"total\": \"20.61\",\n    \"payment_reference\": \"ACCT-12345\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0305.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-01-14",
+        "total": "253.30",
+        "payment_reference": "ACCT-13849",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.157,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-01-14\",\n    \"total\": \"253.30\",\n    \"payment_reference\": \"ACCT-13849\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0306.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-07-09",
+        "total": "432.95",
+        "payment_reference": "ACCT-49815",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 20.879,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-07-09\",\n    \"total\": \"432.95\",\n    \"payment_reference\": \"ACCT-49815\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0307.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-06-20",
+        "total": "$22.13",
+        "payment_reference": "ACCT-55447",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 20.94,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-06-20\",\n    \"total\": \"$22.13\",\n    \"payment_reference\": \"ACCT-55447\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0308.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-07-05",
+        "total": "234.51",
+        "payment_reference": "ACCT-57766",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.174,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-07-05\",\n    \"total\": \"234.51\",\n    \"payment_reference\": \"ACCT-57766\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0309.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-06-02",
+        "total": "359.52",
+        "payment_reference": "ACCT-68008",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.264,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-06-02\",\n    \"total\": \"359.52\",\n    \"payment_reference\": \"ACCT-68008\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0310.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-07-02",
+        "total": "320.82",
+        "payment_reference": "ACCT-67179",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 20.718,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-07-02\",\n    \"total\": \"320.82\",\n    \"payment_reference\": \"ACCT-67179\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0311.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-04-12",
+        "total": "100.28",
+        "payment_reference": "ACCT-88072",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.037,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-04-12\",\n    \"total\": \"100.28\",\n    \"payment_reference\": \"ACCT-88072\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0312.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-08-07",
+        "total": "573.55",
+        "payment_reference": "ACCT-90822",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.066,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-08-07\",\n    \"total\": \"573.55\",\n    \"payment_reference\": \"ACCT-90822\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0313.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-09-16",
+        "total": "235.50",
+        "payment_reference": "ACCT-67558",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.088,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-09-16\",\n    \"total\": \"235.50\",\n    \"payment_reference\": \"ACCT-67558\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0314.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-07-31",
+        "total": "156.54",
+        "payment_reference": "ACCT-424744",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.685,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-07-31\",\n    \"total\": \"156.54\",\n    \"payment_reference\": \"ACCT-424744\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0315.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-03-10",
+        "total": "72.67",
+        "payment_reference": "ACCT-429176",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.052,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-03-10\",\n    \"total\": \"72.67\",\n    \"payment_reference\": \"ACCT-429176\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0316.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-08-04",
+        "total": "228.18",
+        "payment_reference": "ACCT-12345",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.01,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-08-04\",\n    \"total\": \"228.18\",\n    \"payment_reference\": \"ACCT-12345\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0317.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-02-12",
+        "total": "160.68",
+        "payment_reference": "ACCT-22557",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.032,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-02-12\",\n    \"total\": \"160.68\",\n    \"payment_reference\": \"ACCT-22557\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0318.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-05-23",
+        "total": "48.05",
+        "payment_reference": "ACCT-12345",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.058,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-05-23\",\n    \"total\": \"48.05\",\n    \"payment_reference\": \"ACCT-12345\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0319.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-09-01",
+        "total": "$165.12",
+        "payment_reference": "ACCT-33317",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 21.179,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-09-01\",\n    \"total\": \"$165.12\",\n    \"payment_reference\": \"ACCT-33317\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    }
+  ]
+}

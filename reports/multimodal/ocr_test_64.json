@@ -1,0 +1,819 @@
+{
+  "method": "ocr",
+  "split": "test",
+  "model": "Tesseract OCR + deterministic parsing",
+  "evaluation": {
+    "documents": 64,
+    "question_answers": 320,
+    "micro_exact_match": 1.0,
+    "by_question": {
+      "document_type": {
+        "exact_match_accuracy": 1.0,
+        "answer_coverage": 1.0,
+        "correct": 64,
+        "total": 64,
+        "answered": 64
+      },
+      "date": {
+        "exact_match_accuracy": 1.0,
+        "answer_coverage": 1.0,
+        "correct": 64,
+        "total": 64,
+        "answered": 64
+      },
+      "total": {
+        "exact_match_accuracy": 1.0,
+        "answer_coverage": 1.0,
+        "correct": 64,
+        "total": 64,
+        "answered": 64
+      },
+      "payment_reference": {
+        "exact_match_accuracy": 1.0,
+        "answer_coverage": 1.0,
+        "correct": 64,
+        "total": 64,
+        "answered": 64
+      },
+      "arithmetic_consistency": {
+        "exact_match_accuracy": 1.0,
+        "answer_coverage": 1.0,
+        "correct": 64,
+        "total": 64,
+        "answered": 64
+      }
+    }
+  },
+  "mean_seconds_per_document": 0.149,
+  "limitations": "Synthetic generator-derived answer key; no real-world generalization claims. VQA measures printed fields, not authenticity or fraud.",
+  "predictions": [
+    {
+      "file": "images/doc_0256.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-08-14",
+        "total": "$234.14",
+        "payment_reference": "ACCT-63381",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.174,
+      "raw_output": "NORTHLINE SUPPLY\nCUSTOMER RECEIPT\nReceipt no: RC-509018\nPurchased: 2026-08-14\nITEM PRICE\nOffice item $43.76\nPacking material $65.65\nDigital service $54.70\nHandling charge $54.71\nSubtotal $218.82\nTax $15.32\nTOTAL $234.14\nPayment ref: ACCT-63381\nsynthetic example - no financial value"
+    },
+    {
+      "file": "images/doc_0257.jpg",
+      "prediction": {
+        "document_type": "invoice",
+        "date": "2026-03-04",
+        "total": "$248.56",
+        "payment_reference": "ACCT-11049",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.151,
+      "raw_output": "BLUE HERON GOODS\n\nBilling contact: accounts@sample.invalid\n\nInvoice ID: INV-226819\n\nInvoice date: 2026-03-04\n\nDESCRIPTION AMOUNT\n\nDocument processing $81.30\n\nSecure handling $92.92\n\nService support $58.08\nSubtotal $232.30\nTax (7%) $16.26\nTOTAL $248.56\n\nPayment reference: ACCT-11049\n\nDemonstration document - not a real invoice"
+    },
+    {
+      "file": "images/doc_0258.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-04-04",
+        "total": "$471.00",
+        "payment_reference": "ACCT-89718",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.147,
+      "raw_output": "CIVIC OFFICE MART\nCUSTOMER RECEIPT\nReceipt no: RC-181527\nPurchased: 2026-04-04\nITEM PRICE\nOffice item $88.04\nPacking material $132.06\nDigital service $110.05\nHandling charge $110.04\nSubtotal $440.19\nTax $30.81\nTOTAL $471.00\nPayment ref: ACCT-89718\nsynthetic example - no financial value"
+    },
+    {
+      "file": "images/doc_0259.jpg",
+      "prediction": {
+        "document_type": "invoice",
+        "date": "2026-05-11",
+        "total": "$139.51",
+        "payment_reference": "ACCT-87304",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.151,
+      "raw_output": "RIVERBEND RETAIL\n\nBilling contact: accounts@sample.invalid\n\nInvoice ID: INV-432413\n\nInvoice date: 2026-05-11\n\nDESCRIPTION AMOUNT\n\nDocument processing $45.63\n\nSecure handling $52.15\n\nService support $32.60\nSubtotal $130.38\nTax (7%) $9.13\nTOTAL $139.51\n\nPayment reference: ACCT-87304\n\nDemonstration document - not a real invoice"
+    },
+    {
+      "file": "images/doc_0260.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-05-29",
+        "total": "$314.98",
+        "payment_reference": "ACCT-71575",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.148,
+      "raw_output": "NORTHLINE SUPPLY\nCUSTOMER RECEIPT\nReceipt no: RC-884791\nPurchased: 2026-05-29\nITEM PRICE\nOffice item $58.87\nPacking material $88.31\nDigital service $73.59\nHandling charge $73.60\nSubtotal $294.37\nTax $20.61\nTOTAL $314.98\nPayment ref: ACCT-71575\nsynthetic example - no financial value"
+    },
+    {
+      "file": "images/doc_0261.jpg",
+      "prediction": {
+        "document_type": "invoice",
+        "date": "2026-01-30",
+        "total": "$378.72",
+        "payment_reference": "ACCT-59367",
+        "arithmetic_consistency": "NO"
+      },
+      "runtime_s": 0.152,
+      "raw_output": "BLUE HERON GOODS\n\nBilling contact: accounts@sample.invalid\n\nInvoice ID: INV-681423\n\nInvoice date: 2026-01-30\n\nDESCRIPTION AMOUNT\n\nDocument processing $87.24\n\nSecure handling $99.71\n\nService support $62.32\nSubtotal $249.27\nTax (7%) $17.45\nTOTAL $378.72\n\nPayment reference: ACCT-59367\n\nDemonstration document - not a real invoice"
+    },
+    {
+      "file": "images/doc_0262.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-05-21",
+        "total": "$23.69",
+        "payment_reference": "ACCT-29276",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.143,
+      "raw_output": "CIVIC OFFICE MART\nCUSTOMER RECEIPT\nReceipt no: RC-777719\nPurchased: 2026-05-21\nITEM PRICE\nOffice item $4.43\nPacking material $6.64\nDigital service $5.54\nHandling charge $5.53\nSubtotal $22.14\nTax $1.55\nTOTAL $23.69\nPayment ref: ACCT-29276\nsynthetic example - no financial value"
+    },
+    {
+      "file": "images/doc_0263.jpg",
+      "prediction": {
+        "document_type": "invoice",
+        "date": "2026-07-21",
+        "total": "$193.34",
+        "payment_reference": "ACCT-28518",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.156,
+      "raw_output": "RIVERBEND RETAIL\n\nBilling contact: accounts@sample.invalid\n\nInvoice ID: INV-115652\n\nInvoice date: 2026-07-21\n\nDESCRIPTION AMOUNT\n\nDocument processing $63.24\n\nSecure handling $72.28\n\nService support $45.17\nSubtotal $180.69\nTax (7%) $12.65\nTOTAL $193.34\n\nPayment reference: ACCT-28518\n\nDemonstration document - not a real invoice"
+    },
+    {
+      "file": "images/doc_0264.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-02-10",
+        "total": "$214.60",
+        "payment_reference": "ACCT-84187",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.145,
+      "raw_output": "NORTHLINE SUPPLY\nCUSTOMER RECEIPT\nReceipt no: RC-778407\nPurchased: 2026-02-10\nITEM PRICE\nOffice item $40.11\nPacking material $60.17\nDigital service $50.14\nHandling charge $50.14\nSubtotal $200.56\nTax $14.04\nTOTAL $214.60\nPayment ref: ACCT-84187\nsynthetic example - no financial value"
+    },
+    {
+      "file": "images/doc_0265.jpg",
+      "prediction": {
+        "document_type": "invoice",
+        "date": "2026-05-19",
+        "total": "$434.40",
+        "payment_reference": "ACCT-40709",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.15,
+      "raw_output": "BLUE HERON GOODS\n\nBilling contact: accounts@sample.invalid\n\nInvoice ID: INV-243049\n\nInvoice date: 2026-05-19\n\nDESCRIPTION AMOUNT\n\nDocument processing $142.09\n\nSecure handling $162.39\n\nService support $101.50\nSubtotal $405.98\nTax (7%) $28.42\nTOTAL $434.40\n\nPayment reference: ACCT-40709\n\nDemonstration document - not a real invoice"
+    },
+    {
+      "file": "images/doc_0266.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-07-10",
+        "total": "$189.13",
+        "payment_reference": "ACCT-82077",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.147,
+      "raw_output": "CIVIC OFFICE MART\nCUSTOMER RECEIPT\nReceipt no: RC-394702\nPurchased: 2026-07-10\nITEM PRICE\nOffice item $35.35\nPacking material $53.03\nDigital service $44.19\nHandling charge $44.19\nSubtotal $176.76\nTax $12.37\nTOTAL $189.13\nPayment ref: ACCT-82077\nsynthetic example - no financial value"
+    },
+    {
+      "file": "images/doc_0267.jpg",
+      "prediction": {
+        "document_type": "invoice",
+        "date": "2026-07-25",
+        "total": "$202.59",
+        "payment_reference": "ACCT-48499",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.155,
+      "raw_output": "RIVERBEND RETAIL\n\nBilling contact: accounts@sample.invalid\n\nInvoice ID: INV-196408\n\nInvoice date: 2026-07-25\n\nDESCRIPTION AMOUNT\n\nDocument processing $66.27\n\nSecure handling $75.74\n\nService support $47.33\nSubtotal $189.34\nTax (7%) $13.25\nTOTAL $202.59\n\nPayment reference: ACCT-48499\n\nDemonstration document - not a real invoice"
+    },
+    {
+      "file": "images/doc_0268.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-05-30",
+        "total": "$472.63",
+        "payment_reference": "ACCT-46657",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.147,
+      "raw_output": "NORTHLINE SUPPLY\nCUSTOMER RECEIPT\nReceipt no: RC-443455\nPurchased: 2026-05-30\nITEM PRICE\nOffice item $88.34\nPacking material $132.51\nDigital service $110.43\nHandling charge $110.43\nSubtotal $441.71\nTax $30.92\nTOTAL $472.63\nPayment ref: ACCT-46657\nsynthetic example - no financial value"
+    },
+    {
+      "file": "images/doc_0269.jpg",
+      "prediction": {
+        "document_type": "invoice",
+        "date": "2026-03-22",
+        "total": "$205.19",
+        "payment_reference": "ACCT-69424",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.152,
+      "raw_output": "BLUE HERON GOODS\n\nBilling contact: accounts@sample.invalid\n\nInvoice ID: INV-802844\n\nInvoice date: 2026-03-22\n\nDESCRIPTION AMOUNT\n\nDocument processing $67.12\n\nSecure handling $76.71\n\nService support $47.94\nSubtotal $191.77\nTax (7%) $13.42\nTOTAL $205.19\n\nPayment reference: ACCT-69424\n\nDemonstration document - not a real invoice"
+    },
+    {
+      "file": "images/doc_0270.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-01-26",
+        "total": "$189.39",
+        "payment_reference": "ACCT-43802",
+        "arithmetic_consistency": "NO"
+      },
+      "runtime_s": 0.146,
+      "raw_output": "CIVIC OFFICE MART\nCUSTOMER RECEIPT\nReceipt no: RC-153561\nPurchased: 2026-01-26\nITEM PRICE\nOffice item $19.14\nPacking material $28.71\nDigital service $23.92\nHandling charge $23.92\nSubtotal $95.69\nTax $6.70\nTOTAL $189.39\nPayment ref: ACCT-43802\nsynthetic example - no financial value"
+    },
+    {
+      "file": "images/doc_0271.jpg",
+      "prediction": {
+        "document_type": "invoice",
+        "date": "2026-10-12",
+        "total": "$424.13",
+        "payment_reference": "ACCT-21444",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.153,
+      "raw_output": "RIVERBEND RETAIL\n\nBilling contact: accounts@sample.invalid\n\nInvoice ID: INV-742757\n\nInvoice date: 2026-10-12\n\nDESCRIPTION AMOUNT\n\nDocument processing $138.73\n\nSecure handling $158.55\n\nService support $99.10\nSubtotal $396.38\nTax (7%) $27.75\nTOTAL $424.13\n\nPayment reference: ACCT-21444\n\nDemonstration document - not a real invoice"
+    },
+    {
+      "file": "images/doc_0272.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-06-17",
+        "total": "$339.74",
+        "payment_reference": "ACCT-93694",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.148,
+      "raw_output": "NORTHLINE SUPPLY\nCUSTOMER RECEIPT\nReceipt no: RC-830246\nPurchased: 2026-06-17\nITEM PRICE\nOffice item $63.50\nPacking material $95.25\nDigital service $79.38\nHandling charge $79.38\nSubtotal $317.51\nTax $22.23\nTOTAL $339.74\nPayment ref: ACCT-93694\nsynthetic example - no financial value"
+    },
+    {
+      "file": "images/doc_0273.jpg",
+      "prediction": {
+        "document_type": "invoice",
+        "date": "2026-08-03",
+        "total": "$321.88",
+        "payment_reference": "ACCT-49465",
+        "arithmetic_consistency": "NO"
+      },
+      "runtime_s": 0.152,
+      "raw_output": "BLUE HERON GOODS\n\nBilling contact: accounts@sample.invalid\n\nInvoice ID: INV-592249\n\nInvoice date: 2026-08-03\n\nDESCRIPTION AMOUNT\n\nDocument processing $66.69\n\nSecure handling $76.22\n\nService support $47.63\nSubtotal $190.54\nTax (7%) $13.34\nTOTAL $321.88\n\nPayment reference: ACCT-49465\n\nDemonstration document - not a real invoice"
+    },
+    {
+      "file": "images/doc_0274.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-09-01",
+        "total": "$232.83",
+        "payment_reference": "ACCT-19479",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.146,
+      "raw_output": "CIVIC OFFICE MART\nCUSTOMER RECEIPT\nReceipt no: RC-348611\nPurchased: 2026-09-01\nITEM PRICE\nOffice item $43.52\nPacking material $65.28\nDigital service $54.40\nHandling charge $54.40\nSubtotal $217.60\nTax $15.23\nTOTAL $232.83\nPayment ref: ACCT-19479\nSynthetic example - no financial value"
+    },
+    {
+      "file": "images/doc_0275.jpg",
+      "prediction": {
+        "document_type": "invoice",
+        "date": "2026-02-15",
+        "total": "$123.07",
+        "payment_reference": "ACCT-65460",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.148,
+      "raw_output": "RIVERBEND RETAIL\n\nBilling contact: accounts@sample.invalid\n\nInvoice ID: INV-422184\n\nInvoice date: 2026-02-15\n\nDESCRIPTION AMOUNT\n\nDocument processing $40.26\n\nSecure handling $46.01\n\nService support $28.75\nSubtotal $115.02\nTax (7%) $8.05\nTOTAL $123.07\n\nPayment reference: ACCT-65460\n\nDemonstration document - not a real invoice"
+    },
+    {
+      "file": "images/doc_0276.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-05-04",
+        "total": "$323.63",
+        "payment_reference": "ACCT-43261",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.146,
+      "raw_output": "NORTHLINE SUPPLY\nCUSTOMER RECEIPT\nReceipt no: RC-114772\nPurchased: 2026-05-04\nITEM PRICE\nOffice item $60.49\nPacking material $90.74\nDigital service $75.61\nHandling charge $75.62\nSubtotal $302.46\nTax $21.17\nTOTAL $323.63\nPayment ref: ACCT-43261 PAID\nsynthetic example - no financial value"
+    },
+    {
+      "file": "images/doc_0277.jpg",
+      "prediction": {
+        "document_type": "invoice",
+        "date": "2026-01-30",
+        "total": "$236.31",
+        "payment_reference": "ACCT-38753",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.153,
+      "raw_output": "BLUE HERON GOODS\n\nBilling contact: accounts@sample.invalid\n\nInvoice ID: INV-623152\n\nInvoice date: 2026-01-30\n\nDESCRIPTION AMOUNT\n\nDocument processing $77.30\n\nSecure handling $88.34\n\nService support $55.21\nSubtotal $220.85\nTax (7%) $15.46\nTOTAL $236.31\n\nPayment reference: ACCT-38753\n\nDemonstration document - not a real invoice"
+    },
+    {
+      "file": "images/doc_0278.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-06-17",
+        "total": "$421.49",
+        "payment_reference": "ACCT-44722",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.147,
+      "raw_output": "CIVIC OFFICE MART\nCUSTOMER RECEIPT\nReceipt no: RC-519884\nPurchased: 2026-06-17\nITEM PRICE\nOffice item $78.78\nPacking material $118.18\nDigital service $98.48\nHandling charge $98.48\nSubtotal $393.92\nTax $27.57\nTOTAL $421.49\nPayment ref: ACCT-44722\nsynthetic example - no financial value"
+    },
+    {
+      "file": "images/doc_0279.jpg",
+      "prediction": {
+        "document_type": "invoice",
+        "date": "2026-01-12",
+        "total": "$455.10",
+        "payment_reference": "ACCT-82515",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.151,
+      "raw_output": "RIVERBEND RETAIL\n\nBilling contact: accounts@sample.invalid\n\nInvoice ID: INV-403867\n\nInvoice date: 2026-01-12\n\nDESCRIPTION AMOUNT\n\nDocument processing $148.87\n\nSecure handling $170.13\n\nService support $106.33\nSubtotal $425.33\nTax (7%) $29.77\nTOTAL $455.10\n\nPayment reference: ACCT-82515\n\nDemonstration document - not a real invoice"
+    },
+    {
+      "file": "images/doc_0280.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-08-18",
+        "total": "$279.69",
+        "payment_reference": "ACCT-25126",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.144,
+      "raw_output": "NORTHLINE SUPPLY\nCUSTOMER RECEIPT\nReceipt no: RC-551691\nPurchased: 2026-08-18\nITEM PRICE\nOffice item $52.28\nPacking material $78.42\nDigital service $65.35\nHandling charge $65.34\nSubtotal $261.39\nTax $18.30\nTOTAL $279.69\nPayment ref: ACCT-25126\nsynthetic example - no financial value"
+    },
+    {
+      "file": "images/doc_0281.jpg",
+      "prediction": {
+        "document_type": "invoice",
+        "date": "2026-07-14",
+        "total": "$299.47",
+        "payment_reference": "ACCT-57690",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.157,
+      "raw_output": "BLUE HERON GOODS\n\nBilling contact: accounts@sample.invalid\n\nInvoice ID: INV-694327\n\nInvoice date: 2026-07-14\n\nDESCRIPTION AMOUNT\n\nDocument processing $97.96\n\nSecure handling $111.95\n\nService support $69.97\nSubtotal $279.88\nTax (7%) $19.59\nTOTAL $299.47\n\nPayment reference: ACCT-57690\n\nDemonstration document - not a real invoice"
+    },
+    {
+      "file": "images/doc_0282.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-02-28",
+        "total": "$442.42",
+        "payment_reference": "ACCT-73246",
+        "arithmetic_consistency": "NO"
+      },
+      "runtime_s": 0.146,
+      "raw_output": "CIVIC OFFICE MART\nCUSTOMER RECEIPT\nReceipt no: RC-149912\nPurchased: 2026-02-28\nITEM PRICE\nOffice item $61.76\nPacking material $92.64\nDigital service $77.20\nHandling charge $77.20\nSubtotal $308.80\nTax $21.62\nTOTAL $442.42\nPayment ref: ACCT-73246\nsynthetic example - no financial value"
+    },
+    {
+      "file": "images/doc_0283.jpg",
+      "prediction": {
+        "document_type": "invoice",
+        "date": "2026-01-19",
+        "total": "$456.00",
+        "payment_reference": "ACCT-52709",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.153,
+      "raw_output": "RIVERBEND RETAIL\n\nBilling contact: accounts@sample.invalid\n\nInvoice ID: INV-883187\n\nInvoice date: 2026-01-19\n\nDESCRIPTION AMOUNT\n\nDocument processing $149.16\n\nSecure handling $170.47\n\nService support $106.54\nSubtotal $426.17\nTax (7%) $29.83\nTOTAL $456.00\n\nPayment reference: ACCT-52709\n\nDemonstration document - not a real invoice"
+    },
+    {
+      "file": "images/doc_0284.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-05-21",
+        "total": "$141.05",
+        "payment_reference": "ACCT-25899",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.144,
+      "raw_output": "NORTHLINE SUPPLY\nCUSTOMER RECEIPT\nReceipt no: RC-768377\nPurchased: 2026-05-21\nITEM PRICE\nOffice item $26.36\nPacking material $39.55\nDigital service $32.95\nHandling charge $32.96\nSubtotal $131.82\nTax $9.23\nTOTAL $141.05\nPayment ref: ACCT-25899\nsynthetic example - no financial value"
+    },
+    {
+      "file": "images/doc_0285.jpg",
+      "prediction": {
+        "document_type": "invoice",
+        "date": "2026-06-14",
+        "total": "$465.79",
+        "payment_reference": "ACCT-23647",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.153,
+      "raw_output": "BLUE HERON GOODS\n\nBilling contact: accounts@sample.invalid\n\nInvoice ID: INV-864769\n\nInvoice date: 2026-06-14\n\nDESCRIPTION AMOUNT\n\nDocument processing $152.36\n\nSecure handling $174.13\n\nService support $108.83\nSubtotal $435.32\nTax (7%) $30.47\nTOTAL $465.79\n\nPayment reference: ACCT-23647\n\nDemonstration document - not a real invoice"
+    },
+    {
+      "file": "images/doc_0286.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-05-02",
+        "total": "$196.81",
+        "payment_reference": "ACCT-55003",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.146,
+      "raw_output": "CIVIC OFFICE MART\nCUSTOMER RECEIPT\nReceipt no: RC-782569\nPurchased: 2026-05-02\nITEM PRICE\nOffice item $36.79\nPacking material $55.18\nDigital service $45.98\nHandling charge $45.98\nSubtotal $183.93\nTax $12.88\nTOTAL $196.81\nPayment ref: ACCT-55003\nSynthetic example - no financial value"
+    },
+    {
+      "file": "images/doc_0287.jpg",
+      "prediction": {
+        "document_type": "invoice",
+        "date": "2026-02-14",
+        "total": "$133.92",
+        "payment_reference": "ACCT-69091",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.151,
+      "raw_output": "RIVERBEND RETAIL\n\nBilling contact: accounts@sample.invalid\n\nInvoice ID: INV-412825\n\nInvoice date: 2026-02-14\n\nDESCRIPTION AMOUNT\n\nDocument processing $43.81\n\nSecure handling $50.06\n\nService support $31.29\nSubtotal $125.16\nTax (7%) $8.76\nTOTAL $133.92\n\nPayment reference: ACCT-69091\n\nDemonstration document - not a real invoice"
+    },
+    {
+      "file": "images/doc_0288.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-01-25",
+        "total": "$136.40",
+        "payment_reference": "ACCT-82523",
+        "arithmetic_consistency": "NO"
+      },
+      "runtime_s": 0.142,
+      "raw_output": "NORTHLINE SUPPLY\nCUSTOMER RECEIPT\nReceipt no: RC-223479\nPurchased: 2026-01-25\nITEM PRICE\nOffice item $11.85\nPacking material $17.77\nDigital service $14.81\nHandling charge $14.82\nSubtotal $59.25\nTax $4.15\nTOTAL $136.40\nPayment ref: ACCT-82523\nsynthetic example - no financial value"
+    },
+    {
+      "file": "images/doc_0289.jpg",
+      "prediction": {
+        "document_type": "invoice",
+        "date": "2026-08-13",
+        "total": "$472.38",
+        "payment_reference": "ACCT-18775",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.153,
+      "raw_output": "BLUE HERON GOODS\nBilling contact: accounts@sample.invalid\nInvoice ID: INV-680036\nInvoice date: 2026-08-13\nDESCRIPTION AMOUNT\nDocument processing $154.52\nSecure handling $176.59\nService support $110.37\nSubtotal $441.48\nTax (7%) $30.90\nTOTAL $472.38\nPayment reference: ACCT-18775\nPAID\nDemonstration document - not a real invoice"
+    },
+    {
+      "file": "images/doc_0290.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-05-23",
+        "total": "$497.29",
+        "payment_reference": "ACCT-36202",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.151,
+      "raw_output": "CIVIC OFFICE MART\nCUSTOMER RECEIPT\nReceipt no: RC-413581\nPurchased: 2026-05-23\nITEM PRICE\nOffice item $92.95\nPacking material $139.43\nDigital service $116.19\nHandling charge $116.19\nSubtotal $464.76\nTax $32.52\nTOTAL $497.29\nPayment ref: ACCT-36202\nsynthetic example - no financial value"
+    },
+    {
+      "file": "images/doc_0291.jpg",
+      "prediction": {
+        "document_type": "invoice",
+        "date": "2026-03-18",
+        "total": "$492.44",
+        "payment_reference": "ACCT-44555",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.151,
+      "raw_output": "RIVERBEND RETAIL\n\nBilling contact: accounts@sample.invalid\n\nInvoice ID: INV-780920\n\nInvoice date: 2026-03-18\n\nDESCRIPTION AMOUNT\n\nDocument processing $161.08\n\nSecure handling $184.09\n\nService support $115.05\nSubtotal $460.22\nTax (7%) $32.22\nTOTAL $492.44\n\nPayment reference: ACCT-44555\n\nDemonstration document - not a real invoice"
+    },
+    {
+      "file": "images/doc_0292.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-03-18",
+        "total": "$184.82",
+        "payment_reference": "ACCT-62357",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.144,
+      "raw_output": "NORTHLINE SUPPLY\nCUSTOMER RECEIPT\nReceipt no: RC-213115\nPurchased: 2026-03-18\nITEM PRICE\nOffice item $34.55\nPacking material $51.82\nDigital service $43.18\nHandling charge $43.18\nSubtotal $172.73\nTax $12.09\nTOTAL $184.82\nPayment ref: ACCT-62357\nsynthetic example - no financial value"
+    },
+    {
+      "file": "images/doc_0293.jpg",
+      "prediction": {
+        "document_type": "invoice",
+        "date": "2026-07-02",
+        "total": "$413.94",
+        "payment_reference": "ACCT-28218",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.153,
+      "raw_output": "BLUE HERON GOODS\n\nBilling contact: accounts@sample.invalid\n\nInvoice ID: INV-686985\n\nInvoice date: 2026-07-02\n\nDESCRIPTION AMOUNT\n\nDocument processing $135.40\n\nSecure handling $154.74\n\nService support $96.72\nSubtotal $386.86\nTax (7%) $27.08\nTOTAL $413.94\n\nPayment reference: ACCT-28218\n\nDemonstration document - not a real invoice"
+    },
+    {
+      "file": "images/doc_0294.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-02-24",
+        "total": "$410.16",
+        "payment_reference": "ACCT-41107",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.146,
+      "raw_output": "CIVIC OFFICE MART\nCUSTOMER RECEIPT\nReceipt no: RC-685471\nPurchased: 2026-02-24\nITEM PRICE\nOffice item $76.67\nPacking material $115.00\nDigital service $95.83\nHandling charge $95.83\nSubtotal $383.33\nTax $26.83\nTOTAL $410.16\nPayment ref: ACCT-41107\nsynthetic example - no financial value"
+    },
+    {
+      "file": "images/doc_0295.jpg",
+      "prediction": {
+        "document_type": "invoice",
+        "date": "2026-01-20",
+        "total": "$264.18",
+        "payment_reference": "ACCT-95266",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.15,
+      "raw_output": "RIVERBEND RETAIL\n\nBilling contact: accounts@sample.invalid\n\nInvoice ID: INV-337742\n\nInvoice date: 2026-01-20\n\nDESCRIPTION AMOUNT\n\nDocument processing $86.41\n\nSecure handling $98.76\n\nService support $61.73\nSubtotal $246.90\nTax (7%) $17.28\nTOTAL $264.18\n\nPayment reference: ACCT-95266\n\nDemonstration document - not a real invoice"
+    },
+    {
+      "file": "images/doc_0296.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-01-24",
+        "total": "$455.93",
+        "payment_reference": "ACCT-84798",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.144,
+      "raw_output": "NORTHLINE SUPPLY\nCUSTOMER RECEIPT\nReceipt no: RC-636858\nPurchased: 2026-01-24\nITEM PRICE\nOffice item $85.22\nPacking material $127.83\nDigital service $106.53\nHandling charge $106.52\nSubtotal $426.10\nTax $29.83\nTOTAL $455.93\nPayment ref: ACCT-84798\nsynthetic example - no financial value"
+    },
+    {
+      "file": "images/doc_0297.jpg",
+      "prediction": {
+        "document_type": "invoice",
+        "date": "2026-05-13",
+        "total": "$386.60",
+        "payment_reference": "ACCT-46159",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.154,
+      "raw_output": "BLUE HERON GOODS\n\nBilling contact: accounts@sample.invalid\n\nInvoice ID: INV-816300\n\nInvoice date: 2026-05-13\n\nDESCRIPTION AMOUNT\n\nDocument processing $126.46\n\nSecure handling $144.52\n\nService support $90.33\nSubtotal $361.31\nTax (7%) $25.29\nTOTAL $386.60\n\nPayment reference: ACCT-46159\n\nDemonstration document - not a real invoice"
+    },
+    {
+      "file": "images/doc_0298.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-04-17",
+        "total": "$496.91",
+        "payment_reference": "ACCT-37596",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.145,
+      "raw_output": "CIVIC OFFICE MART\nCUSTOMER RECEIPT\nReceipt no: RC-802469\nPurchased: 2026-04-17\nITEM PRICE\nOffice item $92.88\nPacking material $139.32\nDigital service $116.10\nHandling charge $116.10\nSubtotal $464.40\nTax $32.51\nTOTAL $496.91\nPayment ref: ACCT-37596\nsynthetic example - no financial value"
+    },
+    {
+      "file": "images/doc_0299.jpg",
+      "prediction": {
+        "document_type": "invoice",
+        "date": "2026-01-03",
+        "total": "$296.29",
+        "payment_reference": "ACCT-72156",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.151,
+      "raw_output": "RIVERBEND RETAIL\n\nBilling contact: accounts@sample.invalid\n\nInvoice ID: INV-858407\n\nInvoice date: 2026-01-03\n\nDESCRIPTION AMOUNT\n\nDocument processing $96.92\n\nSecure handling $110.76\n\nService support $69.23\nSubtotal $276.91\nTax (7%) $19.38\nTOTAL $296.29\n\nPayment reference: ACCT-72156\n\nDemonstration document - not a real invoice"
+    },
+    {
+      "file": "images/doc_0300.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-05-21",
+        "total": "$327.33",
+        "payment_reference": "ACCT-77375",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.145,
+      "raw_output": "NORTHLINE SUPPLY\nCUSTOMER RECEIPT\nReceipt no: RC-585009\nPurchased: 2026-05-21\nITEM PRICE\nOffice item $61.18\nPacking material $91.78\nDigital service $76.48\nHandling charge $76.48\nSubtotal $305.92\nTax $21.41\nTOTAL $327.33\nPayment ref: ACCT-77375\nsynthetic example - no financial value"
+    },
+    {
+      "file": "images/doc_0301.jpg",
+      "prediction": {
+        "document_type": "invoice",
+        "date": "2026-01-18",
+        "total": "$57.54",
+        "payment_reference": "ACCT-91083",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.15,
+      "raw_output": "BLUE HERON GOODS\n\nBilling contact: accounts@sample.invalid\n\nInvoice ID: INV-648739\n\nInvoice date: 2026-01-18\n\nDESCRIPTION AMOUNT\n\nDocument processing $18.82\n\nSecure handling $21.51\n\nService support $13.45\nSubtotal $53.78\nTax (7%) $3.76\nTOTAL $57.54\n\nPayment reference: ACCT-91083\n\nDemonstration document - not a real invoice"
+    },
+    {
+      "file": "images/doc_0302.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-06-21",
+        "total": "$504.32",
+        "payment_reference": "ACCT-34909",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.146,
+      "raw_output": "CIVIC OFFICE MART\nCUSTOMER RECEIPT\nReceipt no: RC-829101\nPurchased: 2026-06-21\nITEM PRICE\nOffice item $94.27\nPacking material $141.40\nDigital service $117.83\nHandling charge $117.83\nSubtotal $471.33\nTax $32.99\nTOTAL $504.32\nPayment ref: ACCT-34909 PAID\nsynthetic example - no financial value"
+    },
+    {
+      "file": "images/doc_0303.jpg",
+      "prediction": {
+        "document_type": "invoice",
+        "date": "2026-01-30",
+        "total": "$259.58",
+        "payment_reference": "ACCT-36805",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.148,
+      "raw_output": "RIVERBEND RETAIL\n\nBilling contact: accounts@sample.invalid\n\nInvoice ID: INV-413140\n\nInvoice date: 2026-01-30\n\nDESCRIPTION AMOUNT\n\nDocument processing $84.91\n\nSecure handling $97.04\n\nService support $60.65\nSubtotal $242.60\nTax (7%) $16.98\nTOTAL $259.58\n\nPayment reference: ACCT-36805\n\nDemonstration document - not a real invoice"
+    },
+    {
+      "file": "images/doc_0304.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-04-15",
+        "total": "$20.61",
+        "payment_reference": "ACCT-18557",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.139,
+      "raw_output": "NORTHLINE SUPPLY\nCUSTOMER RECEIPT\nReceipt no: RC-469644\nPurchased: 2026-04-15\nITEM PRICE\nOffice item $3.85\nPacking material $5.78\nDigital service $4.82\nHandling charge $4.81\nSubtotal $19.26\nTax $1.35\nTOTAL $20.61\nPayment ref: ACCT-18557\nsynthetic example - no financial value"
+    },
+    {
+      "file": "images/doc_0305.jpg",
+      "prediction": {
+        "document_type": "invoice",
+        "date": "2026-01-14",
+        "total": "$253.30",
+        "payment_reference": "ACCT-13849",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.15,
+      "raw_output": "BLUE HERON GOODS\n\nBilling contact: accounts@sample.invalid\n\nInvoice ID: INV-352715\n\nInvoice date: 2026-01-14\n\nDESCRIPTION AMOUNT\n\nDocument processing $82.86\n\nSecure handling $94.69\n\nService support $59.18\nSubtotal $236.73\nTax (7%) $16.57\nTOTAL $253.30\n\nPayment reference: ACCT-13849\n\nDemonstration document - not a real invoice"
+    },
+    {
+      "file": "images/doc_0306.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-07-09",
+        "total": "$432.95",
+        "payment_reference": "ACCT-49815",
+        "arithmetic_consistency": "NO"
+      },
+      "runtime_s": 0.146,
+      "raw_output": "CIVIC OFFICE MART\nCUSTOMER RECEIPT\nReceipt no: RC-892523\nPurchased: 2026-07-09\nITEM PRICE\nOffice item $60.93\nPacking material $91.39\nDigital service $76.16\nHandling charge $76.15\nSubtotal $304.63\nTax $21.32\nTOTAL $432.95\nPayment ref: ACCT-49815\nSynthetic example - no financial value"
+    },
+    {
+      "file": "images/doc_0307.jpg",
+      "prediction": {
+        "document_type": "invoice",
+        "date": "2026-06-20",
+        "total": "$67.65",
+        "payment_reference": "ACCT-55447",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.147,
+      "raw_output": "RIVERBEND RETAIL\n\nBilling contact: accounts@sample.invalid\n\nInvoice ID: INV-869415\n\nInvoice date: 2026-06-20\n\nDESCRIPTION AMOUNT\n\nDocument processing $22.13\n\nSecure handling $25.29\n\nService support $15.80\nSubtotal $63.22\nTax (7%) $4.43\nTOTAL $67.65\n\nPayment reference: ACCT-55447\n\nDemonstration document - not a real invoice"
+    },
+    {
+      "file": "images/doc_0308.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-07-05",
+        "total": "$234.51",
+        "payment_reference": "ACCT-57766",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.145,
+      "raw_output": "NORTHLINE SUPPLY\nCUSTOMER RECEIPT\nReceipt no: RC-563706\nPurchased: 2026-07-05\nITEM PRICE\nOffice item $43.83\nPacking material $65.75\nDigital service $54.79\nHandling charge $54.80\nSubtotal $219.17\nTax $15.34\nTOTAL $234.51\nPayment ref: ACCT-57766\nsynthetic example - no financial value"
+    },
+    {
+      "file": "images/doc_0309.jpg",
+      "prediction": {
+        "document_type": "invoice",
+        "date": "2026-06-02",
+        "total": "$359.52",
+        "payment_reference": "ACCT-68068",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.153,
+      "raw_output": "BLUE HERON GOODS\n\nBilling contact: accounts@sample.invalid\n\nInvoice ID: INV-505490\n\nInvoice date: 2026-06-02\n\nDESCRIPTION AMOUNT\n\nDocument processing $117.60\n\nSecure handling $134.40\n\nService support $84.00\nSubtotal $336.00\nTax (7%) $23.52\nTOTAL $359.52\n\nPayment reference: ACCT-68068\n\nDemonstration document - not a real invoice"
+    },
+    {
+      "file": "images/doc_0310.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-07-02",
+        "total": "$320.82",
+        "payment_reference": "ACCT-67179",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.144,
+      "raw_output": "CIVIC OFFICE MART\nCUSTOMER RECEIPT\nReceipt no: RC-874589\nPurchased: 2026-07-02\nITEM PRICE\nOffice item $59.97\nPacking material $89.95\nDigital service $74.96\nHandling charge $74.95\nSubtotal $299.83\nTax $20.99\nTOTAL $320.82\nPayment ref: ACCT-67179\nsynthetic example - no financial value"
+    },
+    {
+      "file": "images/doc_0311.jpg",
+      "prediction": {
+        "document_type": "invoice",
+        "date": "2026-04-12",
+        "total": "$100.28",
+        "payment_reference": "ACCT-88072",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.148,
+      "raw_output": "RIVERBEND RETAIL\n\nBilling contact: accounts@sample.invalid\n\nInvoice ID: INV-335939\n\nInvoice date: 2026-04-12\n\nDESCRIPTION AMOUNT\n\nDocument processing $32.80\n\nSecure handling $37.49\n\nService support $23.43\nSubtotal $93.72\nTax (7%) $6.56\nTOTAL $100.28\n\nPayment reference: ACCT-88072\n\nDemonstration document - not a real invoice"
+    },
+    {
+      "file": "images/doc_0312.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-08-07",
+        "total": "$573.55",
+        "payment_reference": "ACCT-90822",
+        "arithmetic_consistency": "NO"
+      },
+      "runtime_s": 0.144,
+      "raw_output": "NORTHLINE SUPPLY\nCUSTOMER RECEIPT\nReceipt no: RC-623317\nPurchased: 2026-08-07\nITEM PRICE\nOffice item $86.64\nPacking material $129.97\nDigital service $108.31\nHandling charge $108.30\nSubtotal $433.22\nTax $30.33\nTOTAL $573.55\nPayment ref: ACCT-90822\nsynthetic example - no financial value"
+    },
+    {
+      "file": "images/doc_0313.jpg",
+      "prediction": {
+        "document_type": "invoice",
+        "date": "2026-09-16",
+        "total": "$235.50",
+        "payment_reference": "ACCT-67558",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.148,
+      "raw_output": "BLUE HERON GOODS\n\nBilling contact: accounts@sample.invalid\n\nInvoice ID: INV-473779\n\nInvoice date: 2026-09-16\n\nDESCRIPTION AMOUNT\n\nDocument processing $77.03\n\nSecure handling $88.04\n\nService support $55.02\nSubtotal $220.09\nTax (7%) $15.41\nTOTAL $235.50\n\nPayment reference: ACCT-67558\n\nDemonstration document - not a real invoice"
+    },
+    {
+      "file": "images/doc_0314.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-07-31",
+        "total": "$156.54",
+        "payment_reference": "ACCT-42474",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.144,
+      "raw_output": "CIVIC OFFICE MART\nCUSTOMER RECEIPT\nReceipt no: RC-274728\nPurchased: 2026-07-31\nITEM PRICE\nOffice item $29.26\nPacking material $43.89\nDigital service $36.58\nHandling charge $36.57\nSubtotal $146.30\nTax $10.24\nTOTAL $156.54\nPayment ref: ACCT-42474\nsynthetic example - no financial value"
+    },
+    {
+      "file": "images/doc_0315.jpg",
+      "prediction": {
+        "document_type": "invoice",
+        "date": "2026-03-10",
+        "total": "$222.16",
+        "payment_reference": "ACCT-48935",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.148,
+      "raw_output": "RIVERBEND RETAIL\nBilling contact: accounts@sample.invalid\nInvoice ID: INV-429176\nInvoice date: 2026-03-10\nDESCRIPTION AMOUNT\nDocument processing $72.67\nSecure handling $83.05\nService support $51.91\nSubtotal $207.63\nTax (7%) $14.53\nTOTAL $222.16\nPayment reference: ACCT-48935\nPAID\nDemonstration document - not a real invoice"
+    },
+    {
+      "file": "images/doc_0316.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-08-04",
+        "total": "$228.18",
+        "payment_reference": "ACCT-13863",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.142,
+      "raw_output": "NORTHLINE SUPPLY\nCUSTOMER RECEIPT\nReceipt no: RC-441778\nPurchased: 2026-08-04\nITEM PRICE\nOffice item $42.65\nPacking material $63.97\nDigital service $53.31\nHandling charge $53.32\nSubtotal $213.25\nTax $14.93\nTOTAL $228.18\nPayment ref: ACCT-13863\nsynthetic example - no financial value"
+    },
+    {
+      "file": "images/doc_0317.jpg",
+      "prediction": {
+        "document_type": "invoice",
+        "date": "2026-02-12",
+        "total": "$491.23",
+        "payment_reference": "ACCT-22557",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.15,
+      "raw_output": "BLUE HERON GOODS\n\nBilling contact: accounts@sample.invalid\n\nInvoice ID: INV-393834\n\nInvoice date: 2026-02-12\n\nDESCRIPTION AMOUNT\n\nDocument processing $160.68\n\nSecure handling $183.64\n\nService support $114.77\nSubtotal $459.09\nTax (7%) $32.14\nTOTAL $491.23\n\nPayment reference: ACCT-22557\n\nDemonstration document - not a real invoice"
+    },
+    {
+      "file": "images/doc_0318.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-05-23",
+        "total": "$48.05",
+        "payment_reference": "ACCT-16315",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.145,
+      "raw_output": "CIVIC OFFICE MART\nCUSTOMER RECEIPT\nReceipt no: RC-281781\nPurchased: 2026-05-23\nITEM PRICE\nOffice item $8.98\nPacking material $13.47\nDigital service $11.23\nHandling charge $11.23\nSubtotal $44.91\nTax $3.14\nTOTAL $48.05\nPayment ref: ACCT-16315\nsynthetic example - no financial value"
+    },
+    {
+      "file": "images/doc_0319.jpg",
+      "prediction": {
+        "document_type": "invoice",
+        "date": "2026-09-01",
+        "total": "$504.78",
+        "payment_reference": "ACCT-33317",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 0.149,
+      "raw_output": "RIVERBEND RETAIL\n\nBilling contact: accounts@sample.invalid\n\nInvoice ID: INV-766251\n\nInvoice date: 2026-09-01\n\nDESCRIPTION AMOUNT\n\nDocument processing $165.12\n\nSecure handling $188.70\n\nService support $117.94\nSubtotal $471.76\nTax (7%) $33.02\nTOTAL $504.78\n\nPayment reference: ACCT-33317\n\nDemonstration document - not a real invoice"
+    }
+  ]
+}

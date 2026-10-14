@@ -1,0 +1,7 @@
+# OPTIONAL experiment only. CPU/GPU compatibility depends on your Python version.
+# Install a matching PyTorch wheel separately using https://pytorch.org/get-started/locally/
+transformers>=4.52,<5
+accelerate>=1.0
+safetensors>=0.5
+huggingface-hub>=0.30
+Pillow>=11.2,<14

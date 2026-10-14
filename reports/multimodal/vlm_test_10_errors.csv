@@ -1,0 +1,11 @@
+file,field,correct,expected,prediction
+images/doc_0257.jpg,document_type,0,invoice,receipt
+images/doc_0258.jpg,payment_reference,0,ACCT-89718,ACCT-12345
+images/doc_0259.jpg,document_type,0,invoice,receipt
+images/doc_0259.jpg,payment_reference,0,ACCT-87304,ACCT-12345
+images/doc_0261.jpg,document_type,0,invoice,receipt
+images/doc_0261.jpg,arithmetic_consistency,0,NO,YES
+images/doc_0263.jpg,document_type,0,invoice,receipt
+images/doc_0264.jpg,payment_reference,0,ACCT-84187,ACCT-77840
+images/doc_0265.jpg,document_type,0,invoice,receipt
+images/doc_0265.jpg,total,0,434.40,142.09

@@ -1,0 +1,171 @@
+{
+  "method": "vlm",
+  "split": "test",
+  "model": "HuggingFaceTB/SmolVLM2-500M-Video-Instruct",
+  "evaluation": {
+    "documents": 10,
+    "question_answers": 50,
+    "micro_exact_match": 0.8,
+    "by_question": {
+      "document_type": {
+        "exact_match_accuracy": 0.5,
+        "answer_coverage": 1.0,
+        "correct": 5,
+        "total": 10,
+        "answered": 10
+      },
+      "date": {
+        "exact_match_accuracy": 1.0,
+        "answer_coverage": 1.0,
+        "correct": 10,
+        "total": 10,
+        "answered": 10
+      },
+      "total": {
+        "exact_match_accuracy": 0.9,
+        "answer_coverage": 1.0,
+        "correct": 9,
+        "total": 10,
+        "answered": 10
+      },
+      "payment_reference": {
+        "exact_match_accuracy": 0.7,
+        "answer_coverage": 1.0,
+        "correct": 7,
+        "total": 10,
+        "answered": 10
+      },
+      "arithmetic_consistency": {
+        "exact_match_accuracy": 0.9,
+        "answer_coverage": 1.0,
+        "correct": 9,
+        "total": 10,
+        "answered": 10
+      }
+    }
+  },
+  "mean_seconds_per_document": 18.603,
+  "limitations": "Synthetic generator-derived answer key; no real-world generalization claims. VQA measures printed fields, not authenticity or fraud.",
+  "predictions": [
+    {
+      "file": "images/doc_0256.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-08-14",
+        "total": "234.14",
+        "payment_reference": "ACCT-63381",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 18.977,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-08-14\",\n    \"total\": \"234.14\",\n    \"payment_reference\": \"ACCT-63381\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0257.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-03-04",
+        "total": "248.56",
+        "payment_reference": "ACCT-11049",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 17.283,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-03-04\",\n    \"total\": \"248.56\",\n    \"payment_reference\": \"ACCT-11049\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0258.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-04-04",
+        "total": "471.00",
+        "payment_reference": "ACCT-12345",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 17.427,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-04-04\",\n    \"total\": \"471.00\",\n    \"payment_reference\": \"ACCT-12345\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0259.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-05-11",
+        "total": "139.51",
+        "payment_reference": "ACCT-12345",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 20.693,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-05-11\",\n    \"total\": \"139.51\",\n    \"payment_reference\": \"ACCT-12345\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0260.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-05-29",
+        "total": "314.98",
+        "payment_reference": "ACCT-71575",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 20.17,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-05-29\",\n    \"total\": \"314.98\",\n    \"payment_reference\": \"ACCT-71575\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0261.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-01-30",
+        "total": "378.72",
+        "payment_reference": "ACCT-59367",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 20.597,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-01-30\",\n    \"total\": \"378.72\",\n    \"payment_reference\": \"ACCT-59367\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0262.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-05-21",
+        "total": "23.69",
+        "payment_reference": "ACCT-29276",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 19.801,
+      "raw_output": " {\n  \"document_type\": \"receipt\",\n  \"date\": \"2026-05-21\",\n  \"total\": \"23.69\",\n  \"payment_reference\": \"ACCT-29276\",\n  \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0263.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-07-21",
+        "total": "193.34",
+        "payment_reference": "ACCT-28518",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 16.745,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-07-21\",\n    \"total\": \"193.34\",\n    \"payment_reference\": \"ACCT-28518\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0264.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-02-10",
+        "total": "214.60",
+        "payment_reference": "ACCT-778407",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 17.225,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-02-10\",\n    \"total\": \"214.60\",\n    \"payment_reference\": \"ACCT-778407\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    },
+    {
+      "file": "images/doc_0265.jpg",
+      "prediction": {
+        "document_type": "receipt",
+        "date": "2026-05-19",
+        "total": "142.09",
+        "payment_reference": "ACCT-40709",
+        "arithmetic_consistency": "YES"
+      },
+      "runtime_s": 17.108,
+      "raw_output": " {\n    \"document_type\": \"receipt\",\n    \"date\": \"2026-05-19\",\n    \"total\": \"142.09\",\n    \"payment_reference\": \"ACCT-40709\",\n    \"arithmetic_consistency\": \"YES\"\n}"
+    }
+  ]
+}

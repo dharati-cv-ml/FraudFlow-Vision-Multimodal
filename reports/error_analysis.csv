@@ -1,0 +1,17 @@
+file,document_type,label,risk_score,prediction,edit_type,error_type
+images/doc_0259.jpg,invoice,1,0.34682,0,seamless_date,FALSE_NEGATIVE
+images/doc_0266.jpg,receipt,1,0.05851,0,seamless_reference,FALSE_NEGATIVE
+images/doc_0273.jpg,invoice,1,0.27136,0,seamless_total,FALSE_NEGATIVE
+images/doc_0275.jpg,invoice,0,0.36779,1,none,FALSE_POSITIVE
+images/doc_0276.jpg,receipt,0,0.62322,1,none,FALSE_POSITIVE
+images/doc_0279.jpg,invoice,0,0.36729,1,none,FALSE_POSITIVE
+images/doc_0281.jpg,invoice,1,0.3004,0,reference,FALSE_NEGATIVE
+images/doc_0283.jpg,invoice,0,0.37246,1,none,FALSE_POSITIVE
+images/doc_0287.jpg,invoice,0,0.36037,1,none,FALSE_POSITIVE
+images/doc_0289.jpg,invoice,0,0.70737,1,none,FALSE_POSITIVE
+images/doc_0291.jpg,invoice,0,0.36973,1,none,FALSE_POSITIVE
+images/doc_0293.jpg,invoice,1,0.30177,0,reference,FALSE_NEGATIVE
+images/doc_0302.jpg,receipt,0,0.56475,1,none,FALSE_POSITIVE
+images/doc_0307.jpg,invoice,1,0.3555,0,date,FALSE_NEGATIVE
+images/doc_0308.jpg,receipt,1,0.07055,0,seamless_reference,FALSE_NEGATIVE
+images/doc_0315.jpg,invoice,0,0.71178,1,none,FALSE_POSITIVE

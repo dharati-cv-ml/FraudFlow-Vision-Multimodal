@@ -1,0 +1,33 @@
+{
+  "test_samples": 64,
+  "evaluation_protocol": "Untouched test only. Train on train split; threshold chosen on validation. Fixed OR rule; no test-set tuning.",
+  "ocr_coverage": {
+    "CONSISTENT": 57,
+    "MISMATCH": 7
+  },
+  "visual_only": {
+    "total": 64,
+    "tp": 25,
+    "tn": 23,
+    "fp": 9,
+    "fn": 7,
+    "precision": 0.7353,
+    "recall": 0.7812,
+    "f1": 0.7576,
+    "accuracy": 0.75,
+    "specificity": 0.7188
+  },
+  "ocr_assisted_combined": {
+    "total": 64,
+    "tp": 26,
+    "tn": 23,
+    "fp": 9,
+    "fn": 6,
+    "precision": 0.7429,
+    "recall": 0.8125,
+    "f1": 0.7761,
+    "accuracy": 0.7656,
+    "specificity": 0.7188
+  },
+  "limitations": "Synthetic image modifications and a narrow known layout. OCR check only validates arithmetic, not date/reference authenticity. Missing OCR is not proof of authenticity."
+}

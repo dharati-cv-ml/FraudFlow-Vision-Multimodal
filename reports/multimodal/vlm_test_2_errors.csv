@@ -1,0 +1,2 @@
+file,field,correct,expected,prediction
+images/doc_0257.jpg,document_type,0,invoice,receipt

@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.env
+.env.*
+!.env.example
+.vscode/
+.DS_Store
+*.log
+*.bak
+*.safetensors
+*.pt
+*.pth
+*.ckpt

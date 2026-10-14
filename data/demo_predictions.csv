@@ -1,0 +1,321 @@
+file,risk_score,prediction
+images/doc_0000.jpg,0.05978,NO FLAG
+images/doc_0001.jpg,0.32669,NO FLAG
+images/doc_0002.jpg,0.98566,REVIEW
+images/doc_0003.jpg,0.80804,REVIEW
+images/doc_0004.jpg,0.9401,REVIEW
+images/doc_0005.jpg,0.35989,NO FLAG
+images/doc_0006.jpg,0.75271,REVIEW
+images/doc_0007.jpg,0.40227,REVIEW
+images/doc_0008.jpg,0.07882,NO FLAG
+images/doc_0009.jpg,0.30802,NO FLAG
+images/doc_0010.jpg,0.06088,NO FLAG
+images/doc_0011.jpg,0.42006,REVIEW
+images/doc_0012.jpg,0.07659,NO FLAG
+images/doc_0013.jpg,0.97432,REVIEW
+images/doc_0014.jpg,0.0676,NO FLAG
+images/doc_0015.jpg,0.37455,REVIEW
+images/doc_0016.jpg,0.62557,REVIEW
+images/doc_0017.jpg,0.32814,NO FLAG
+images/doc_0018.jpg,0.85999,REVIEW
+images/doc_0019.jpg,0.97562,REVIEW
+images/doc_0020.jpg,0.9871,REVIEW
+images/doc_0021.jpg,0.32033,NO FLAG
+images/doc_0022.jpg,0.98742,REVIEW
+images/doc_0023.jpg,0.41041,REVIEW
+images/doc_0024.jpg,0.70818,REVIEW
+images/doc_0025.jpg,0.32864,NO FLAG
+images/doc_0026.jpg,0.96833,REVIEW
+images/doc_0027.jpg,0.34617,NO FLAG
+images/doc_0028.jpg,0.06605,NO FLAG
+images/doc_0029.jpg,0.98647,REVIEW
+images/doc_0030.jpg,0.86518,REVIEW
+images/doc_0031.jpg,0.3604,REVIEW
+images/doc_0032.jpg,0.07572,NO FLAG
+images/doc_0033.jpg,0.28279,NO FLAG
+images/doc_0034.jpg,0.98133,REVIEW
+images/doc_0035.jpg,0.33931,NO FLAG
+images/doc_0036.jpg,0.65348,REVIEW
+images/doc_0037.jpg,0.27817,NO FLAG
+images/doc_0038.jpg,0.05451,NO FLAG
+images/doc_0039.jpg,0.82238,REVIEW
+images/doc_0040.jpg,0.93247,REVIEW
+images/doc_0041.jpg,0.31707,NO FLAG
+images/doc_0042.jpg,0.60042,REVIEW
+images/doc_0043.jpg,0.3297,NO FLAG
+images/doc_0044.jpg,0.98462,REVIEW
+images/doc_0045.jpg,0.8159,REVIEW
+images/doc_0046.jpg,0.98133,REVIEW
+images/doc_0047.jpg,0.36208,REVIEW
+images/doc_0048.jpg,0.05919,NO FLAG
+images/doc_0049.jpg,0.33084,NO FLAG
+images/doc_0050.jpg,0.05723,NO FLAG
+images/doc_0051.jpg,0.37236,REVIEW
+images/doc_0052.jpg,0.93979,REVIEW
+images/doc_0053.jpg,0.9856,REVIEW
+images/doc_0054.jpg,0.84738,REVIEW
+images/doc_0055.jpg,0.976,REVIEW
+images/doc_0056.jpg,0.08053,NO FLAG
+images/doc_0057.jpg,0.29373,NO FLAG
+images/doc_0058.jpg,0.98129,REVIEW
+images/doc_0059.jpg,0.98366,REVIEW
+images/doc_0060.jpg,0.85783,REVIEW
+images/doc_0061.jpg,0.9757,REVIEW
+images/doc_0062.jpg,0.98062,REVIEW
+images/doc_0063.jpg,0.36915,REVIEW
+images/doc_0064.jpg,0.94141,REVIEW
+images/doc_0065.jpg,0.98693,REVIEW
+images/doc_0066.jpg,0.05807,NO FLAG
+images/doc_0067.jpg,0.37137,REVIEW
+images/doc_0068.jpg,0.66327,REVIEW
+images/doc_0069.jpg,0.34497,NO FLAG
+images/doc_0070.jpg,0.0603,NO FLAG
+images/doc_0071.jpg,0.98796,REVIEW
+images/doc_0072.jpg,0.06918,NO FLAG
+images/doc_0073.jpg,0.3654,REVIEW
+images/doc_0074.jpg,0.96781,REVIEW
+images/doc_0075.jpg,0.81549,REVIEW
+images/doc_0076.jpg,0.06022,NO FLAG
+images/doc_0077.jpg,0.31139,NO FLAG
+images/doc_0078.jpg,0.06053,NO FLAG
+images/doc_0079.jpg,0.97741,REVIEW
+images/doc_0080.jpg,0.05716,NO FLAG
+images/doc_0081.jpg,0.67386,REVIEW
+images/doc_0082.jpg,0.05709,NO FLAG
+images/doc_0083.jpg,0.9874,REVIEW
+images/doc_0084.jpg,0.06694,NO FLAG
+images/doc_0085.jpg,0.32239,NO FLAG
+images/doc_0086.jpg,0.98709,REVIEW
+images/doc_0087.jpg,0.34708,NO FLAG
+images/doc_0088.jpg,0.94508,REVIEW
+images/doc_0089.jpg,0.31028,NO FLAG
+images/doc_0090.jpg,0.0632,NO FLAG
+images/doc_0091.jpg,0.38359,REVIEW
+images/doc_0092.jpg,0.9708,REVIEW
+images/doc_0093.jpg,0.31709,NO FLAG
+images/doc_0094.jpg,0.97881,REVIEW
+images/doc_0095.jpg,0.35931,NO FLAG
+images/doc_0096.jpg,0.87964,REVIEW
+images/doc_0097.jpg,0.9783,REVIEW
+images/doc_0098.jpg,0.06311,NO FLAG
+images/doc_0099.jpg,0.4041,REVIEW
+images/doc_0100.jpg,0.06872,NO FLAG
+images/doc_0101.jpg,0.32681,NO FLAG
+images/doc_0102.jpg,0.86435,REVIEW
+images/doc_0103.jpg,0.97738,REVIEW
+images/doc_0104.jpg,0.98597,REVIEW
+images/doc_0105.jpg,0.33621,NO FLAG
+images/doc_0106.jpg,0.06789,NO FLAG
+images/doc_0107.jpg,0.70851,REVIEW
+images/doc_0108.jpg,0.05685,NO FLAG
+images/doc_0109.jpg,0.30764,NO FLAG
+images/doc_0110.jpg,0.05449,NO FLAG
+images/doc_0111.jpg,0.8237,REVIEW
+images/doc_0112.jpg,0.0647,NO FLAG
+images/doc_0113.jpg,0.35746,NO FLAG
+images/doc_0114.jpg,0.77969,REVIEW
+images/doc_0115.jpg,0.39531,REVIEW
+images/doc_0116.jpg,0.98768,REVIEW
+images/doc_0117.jpg,0.26186,NO FLAG
+images/doc_0118.jpg,0.98146,REVIEW
+images/doc_0119.jpg,0.35627,NO FLAG
+images/doc_0120.jpg,0.66894,REVIEW
+images/doc_0121.jpg,0.27466,NO FLAG
+images/doc_0122.jpg,0.07782,NO FLAG
+images/doc_0123.jpg,0.37284,REVIEW
+images/doc_0124.jpg,0.98682,REVIEW
+images/doc_0125.jpg,0.28628,NO FLAG
+images/doc_0126.jpg,0.05487,NO FLAG
+images/doc_0127.jpg,0.35698,NO FLAG
+images/doc_0128.jpg,0.98825,REVIEW
+images/doc_0129.jpg,0.32751,NO FLAG
+images/doc_0130.jpg,0.06847,NO FLAG
+images/doc_0131.jpg,0.35888,NO FLAG
+images/doc_0132.jpg,0.84476,REVIEW
+images/doc_0133.jpg,0.25954,NO FLAG
+images/doc_0134.jpg,0.05375,NO FLAG
+images/doc_0135.jpg,0.37001,REVIEW
+images/doc_0136.jpg,0.06676,NO FLAG
+images/doc_0137.jpg,0.29152,NO FLAG
+images/doc_0138.jpg,0.06807,NO FLAG
+images/doc_0139.jpg,0.9784,REVIEW
+images/doc_0140.jpg,0.06149,NO FLAG
+images/doc_0141.jpg,0.31378,NO FLAG
+images/doc_0142.jpg,0.06343,NO FLAG
+images/doc_0143.jpg,0.98661,REVIEW
+images/doc_0144.jpg,0.09277,NO FLAG
+images/doc_0145.jpg,0.32697,NO FLAG
+images/doc_0146.jpg,0.98689,REVIEW
+images/doc_0147.jpg,0.34683,NO FLAG
+images/doc_0148.jpg,0.94623,REVIEW
+images/doc_0149.jpg,0.28852,NO FLAG
+images/doc_0150.jpg,0.75222,REVIEW
+images/doc_0151.jpg,0.97741,REVIEW
+images/doc_0152.jpg,0.09323,NO FLAG
+images/doc_0153.jpg,0.30278,NO FLAG
+images/doc_0154.jpg,0.0792,NO FLAG
+images/doc_0155.jpg,0.98759,REVIEW
+images/doc_0156.jpg,0.86434,REVIEW
+images/doc_0157.jpg,0.29692,NO FLAG
+images/doc_0158.jpg,0.98413,REVIEW
+images/doc_0159.jpg,0.72318,REVIEW
+images/doc_0160.jpg,0.98532,REVIEW
+images/doc_0161.jpg,0.30562,NO FLAG
+images/doc_0162.jpg,0.06068,NO FLAG
+images/doc_0163.jpg,0.39467,REVIEW
+images/doc_0164.jpg,0.07317,NO FLAG
+images/doc_0165.jpg,0.30957,NO FLAG
+images/doc_0166.jpg,0.98502,REVIEW
+images/doc_0167.jpg,0.38736,REVIEW
+images/doc_0168.jpg,0.0779,NO FLAG
+images/doc_0169.jpg,0.30081,NO FLAG
+images/doc_0170.jpg,0.98637,REVIEW
+images/doc_0171.jpg,0.39878,REVIEW
+images/doc_0172.jpg,0.64297,REVIEW
+images/doc_0173.jpg,0.3173,NO FLAG
+images/doc_0174.jpg,0.07251,NO FLAG
+images/doc_0175.jpg,0.38063,REVIEW
+images/doc_0176.jpg,0.96682,REVIEW
+images/doc_0177.jpg,0.3142,NO FLAG
+images/doc_0178.jpg,0.98211,REVIEW
+images/doc_0179.jpg,0.3711,REVIEW
+images/doc_0180.jpg,0.06478,NO FLAG
+images/doc_0181.jpg,0.30973,NO FLAG
+images/doc_0182.jpg,0.05922,NO FLAG
+images/doc_0183.jpg,0.34166,NO FLAG
+images/doc_0184.jpg,0.94686,REVIEW
+images/doc_0185.jpg,0.34254,NO FLAG
+images/doc_0186.jpg,0.05319,NO FLAG
+images/doc_0187.jpg,0.36579,REVIEW
+images/doc_0188.jpg,0.07681,NO FLAG
+images/doc_0189.jpg,0.31196,NO FLAG
+images/doc_0190.jpg,0.98183,REVIEW
+images/doc_0191.jpg,0.39173,REVIEW
+images/doc_0192.jpg,0.71151,REVIEW
+images/doc_0193.jpg,0.97442,REVIEW
+images/doc_0194.jpg,0.05984,NO FLAG
+images/doc_0195.jpg,0.37946,REVIEW
+images/doc_0196.jpg,0.0619,NO FLAG
+images/doc_0197.jpg,0.31454,NO FLAG
+images/doc_0198.jpg,0.61629,REVIEW
+images/doc_0199.jpg,0.36894,REVIEW
+images/doc_0200.jpg,0.98932,REVIEW
+images/doc_0201.jpg,0.32664,NO FLAG
+images/doc_0202.jpg,0.05741,NO FLAG
+images/doc_0203.jpg,0.34165,NO FLAG
+images/doc_0204.jpg,0.07075,NO FLAG
+images/doc_0205.jpg,0.28912,NO FLAG
+images/doc_0206.jpg,0.98324,REVIEW
+images/doc_0207.jpg,0.38552,REVIEW
+images/doc_0208.jpg,0.94871,REVIEW
+images/doc_0209.jpg,0.31202,NO FLAG
+images/doc_0210.jpg,0.05487,NO FLAG
+images/doc_0211.jpg,0.97559,REVIEW
+images/doc_0212.jpg,0.09104,NO FLAG
+images/doc_0213.jpg,0.30945,NO FLAG
+images/doc_0214.jpg,0.97541,REVIEW
+images/doc_0215.jpg,0.37376,REVIEW
+images/doc_0216.jpg,0.72529,REVIEW
+images/doc_0217.jpg,0.31043,NO FLAG
+images/doc_0218.jpg,0.96852,REVIEW
+images/doc_0219.jpg,0.85112,REVIEW
+images/doc_0220.jpg,0.0733,NO FLAG
+images/doc_0221.jpg,0.32968,NO FLAG
+images/doc_0222.jpg,0.84307,REVIEW
+images/doc_0223.jpg,0.32389,NO FLAG
+images/doc_0224.jpg,0.08775,NO FLAG
+images/doc_0225.jpg,0.33631,NO FLAG
+images/doc_0226.jpg,0.98875,REVIEW
+images/doc_0227.jpg,0.98156,REVIEW
+images/doc_0228.jpg,0.06816,NO FLAG
+images/doc_0229.jpg,0.30343,NO FLAG
+images/doc_0230.jpg,0.96746,REVIEW
+images/doc_0231.jpg,0.36208,REVIEW
+images/doc_0232.jpg,0.06682,NO FLAG
+images/doc_0233.jpg,0.98405,REVIEW
+images/doc_0234.jpg,0.04842,NO FLAG
+images/doc_0235.jpg,0.37721,REVIEW
+images/doc_0236.jpg,0.97208,REVIEW
+images/doc_0237.jpg,0.34853,NO FLAG
+images/doc_0238.jpg,0.06633,NO FLAG
+images/doc_0239.jpg,0.35769,NO FLAG
+images/doc_0240.jpg,0.07883,NO FLAG
+images/doc_0241.jpg,0.97171,REVIEW
+images/doc_0242.jpg,0.06298,NO FLAG
+images/doc_0243.jpg,0.36208,REVIEW
+images/doc_0244.jpg,0.05848,NO FLAG
+images/doc_0245.jpg,0.29748,NO FLAG
+images/doc_0246.jpg,0.08545,NO FLAG
+images/doc_0247.jpg,0.9722,REVIEW
+images/doc_0248.jpg,0.98836,REVIEW
+images/doc_0249.jpg,0.82736,REVIEW
+images/doc_0250.jpg,0.97954,REVIEW
+images/doc_0251.jpg,0.377,REVIEW
+images/doc_0252.jpg,0.07905,NO FLAG
+images/doc_0253.jpg,0.26445,NO FLAG
+images/doc_0254.jpg,0.98786,REVIEW
+images/doc_0255.jpg,0.3459,NO FLAG
+images/doc_0256.jpg,0.06379,NO FLAG
+images/doc_0257.jpg,0.28277,NO FLAG
+images/doc_0258.jpg,0.07636,NO FLAG
+images/doc_0259.jpg,0.34682,NO FLAG
+images/doc_0260.jpg,0.07486,NO FLAG
+images/doc_0261.jpg,0.83365,REVIEW
+images/doc_0262.jpg,0.98815,REVIEW
+images/doc_0263.jpg,0.98288,REVIEW
+images/doc_0264.jpg,0.09571,NO FLAG
+images/doc_0265.jpg,0.97833,REVIEW
+images/doc_0266.jpg,0.05851,NO FLAG
+images/doc_0267.jpg,0.35488,NO FLAG
+images/doc_0268.jpg,0.93998,REVIEW
+images/doc_0269.jpg,0.98476,REVIEW
+images/doc_0270.jpg,0.85813,REVIEW
+images/doc_0271.jpg,0.97659,REVIEW
+images/doc_0272.jpg,0.98722,REVIEW
+images/doc_0273.jpg,0.27136,NO FLAG
+images/doc_0274.jpg,0.98276,REVIEW
+images/doc_0275.jpg,0.36779,REVIEW
+images/doc_0276.jpg,0.62322,REVIEW
+images/doc_0277.jpg,0.97557,REVIEW
+images/doc_0278.jpg,0.08325,NO FLAG
+images/doc_0279.jpg,0.36729,REVIEW
+images/doc_0280.jpg,0.06275,NO FLAG
+images/doc_0281.jpg,0.3004,NO FLAG
+images/doc_0282.jpg,0.81657,REVIEW
+images/doc_0283.jpg,0.37246,REVIEW
+images/doc_0284.jpg,0.07173,NO FLAG
+images/doc_0285.jpg,0.32445,NO FLAG
+images/doc_0286.jpg,0.97758,REVIEW
+images/doc_0287.jpg,0.36037,REVIEW
+images/doc_0288.jpg,0.83244,REVIEW
+images/doc_0289.jpg,0.70737,REVIEW
+images/doc_0290.jpg,0.06118,NO FLAG
+images/doc_0291.jpg,0.36973,REVIEW
+images/doc_0292.jpg,0.94536,REVIEW
+images/doc_0293.jpg,0.30177,NO FLAG
+images/doc_0294.jpg,0.07722,NO FLAG
+images/doc_0295.jpg,0.37759,REVIEW
+images/doc_0296.jpg,0.97021,REVIEW
+images/doc_0297.jpg,0.30448,NO FLAG
+images/doc_0298.jpg,0.0678,NO FLAG
+images/doc_0299.jpg,0.9845,REVIEW
+images/doc_0300.jpg,0.06531,NO FLAG
+images/doc_0301.jpg,0.33257,NO FLAG
+images/doc_0302.jpg,0.56475,REVIEW
+images/doc_0303.jpg,0.34708,NO FLAG
+images/doc_0304.jpg,0.93347,REVIEW
+images/doc_0305.jpg,0.29928,NO FLAG
+images/doc_0306.jpg,0.8621,REVIEW
+images/doc_0307.jpg,0.3555,NO FLAG
+images/doc_0308.jpg,0.07055,NO FLAG
+images/doc_0309.jpg,0.32341,NO FLAG
+images/doc_0310.jpg,0.98678,REVIEW
+images/doc_0311.jpg,0.98858,REVIEW
+images/doc_0312.jpg,0.67644,REVIEW
+images/doc_0313.jpg,0.97397,REVIEW
+images/doc_0314.jpg,0.05903,NO FLAG
+images/doc_0315.jpg,0.71178,REVIEW
+images/doc_0316.jpg,0.08611,NO FLAG
+images/doc_0317.jpg,0.30243,NO FLAG
+images/doc_0318.jpg,0.06325,NO FLAG
+images/doc_0319.jpg,0.38234,REVIEW

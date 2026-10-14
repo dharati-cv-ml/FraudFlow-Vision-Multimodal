@@ -1,0 +1,16 @@
+file,document_type,label,edit_type,visual_score,visual_decision,ocr_status,ocr_difference,combined_decision,combined_error
+images/doc_0259.jpg,invoice,1,seamless_date,0.34682,0,CONSISTENT,+0.00,0,FALSE_NEGATIVE
+images/doc_0266.jpg,receipt,1,seamless_reference,0.05851,0,CONSISTENT,+0.00,0,FALSE_NEGATIVE
+images/doc_0275.jpg,invoice,0,none,0.36779,1,CONSISTENT,+0.00,1,FALSE_POSITIVE
+images/doc_0276.jpg,receipt,0,none,0.62322,1,CONSISTENT,+0.00,1,FALSE_POSITIVE
+images/doc_0279.jpg,invoice,0,none,0.36729,1,CONSISTENT,+0.00,1,FALSE_POSITIVE
+images/doc_0281.jpg,invoice,1,reference,0.3004,0,CONSISTENT,+0.00,0,FALSE_NEGATIVE
+images/doc_0283.jpg,invoice,0,none,0.37246,1,CONSISTENT,+0.00,1,FALSE_POSITIVE
+images/doc_0287.jpg,invoice,0,none,0.36037,1,CONSISTENT,+0.00,1,FALSE_POSITIVE
+images/doc_0289.jpg,invoice,0,none,0.70737,1,CONSISTENT,+0.00,1,FALSE_POSITIVE
+images/doc_0291.jpg,invoice,0,none,0.36973,1,CONSISTENT,+0.00,1,FALSE_POSITIVE
+images/doc_0293.jpg,invoice,1,reference,0.30177,0,CONSISTENT,+0.00,0,FALSE_NEGATIVE
+images/doc_0302.jpg,receipt,0,none,0.56475,1,CONSISTENT,+0.00,1,FALSE_POSITIVE
+images/doc_0307.jpg,invoice,1,date,0.3555,0,CONSISTENT,+0.00,0,FALSE_NEGATIVE
+images/doc_0308.jpg,receipt,1,seamless_reference,0.07055,0,CONSISTENT,+0.00,0,FALSE_NEGATIVE
+images/doc_0315.jpg,invoice,0,none,0.71178,1,CONSISTENT,+0.00,1,FALSE_POSITIVE
