@@ -1,70 +1,70 @@
-# Multimodal VQA Experiment — OCR vs Pretrained VLM
+# Multimodal VQA Study — OCR vs Pretrained SmolVLM2
 
-**Research question:** On **unseen synthetic receipt/invoice images**, how does local Tesseract OCR with deterministic field parsing compare with an unmodified pretrained vision-language model when answering a fixed set of document questions?
+## Research question
 
-This is an **additional, optional research experiment** in the existing FraudFlow Vision repository. The existing Windows desktop application remains fully functional without a VLM, Python-server, internet connection, SciPy or CUDA.
+On unseen **synthetic receipt and invoice images**, how does a Tesseract OCR + deterministic parsing baseline compare with a pretrained vision-language model for reading and reasoning about documents?
 
-## Dataset and protocol
+This is an **optional, additional** experiment: the original visual-patch alteration classifier is separate and its evaluation metrics must not be confused with VQA answer accuracy.
 
-- Synthetic data only: 320 independently generated receipts/invoices. Existing splits: 192 train, 64 validation, **64 held-out test**.
-- Exactly 5 questions per image, giving **320 image-question answers on the test split**.
-- Questions (fixed before comparison): document type; printed date; printed TOTAL; payment reference; arithmetic consistency of subtotal + tax vs total.
-- The generator deterministically recovers the **printed** field truth for scoring. Manifest, edit class, initial values, ground-truth edit box, split and expected answers are **never input** to OCR or VLM inference.
-- Both systems receive the same JPGs. The OCR baseline receives no visual-model outputs. VLM receives an image + instruction requesting the same 5 answers as a JSON object. No external lookup or RAG.
-- Report exact-match accuracy per question and micro across 5 × 64, missing-answer coverage, inference time, and examples of errors. A blank/unparsable answer is counted wrong.
-- Report pretrained VLM scores **only after the complete test run**. The example `--limit 2` is a smoke test, NOT a valid comparison.
+## Dataset and ground truth
 
-## Methods
+- **320 fictional JPG documents**: 192 train, 64 validation, 64 held-out test; equal clean/edited proportions per split.
+- Five fixed questions per document: `document_type`, `date`, `total`, `payment_reference`, and `arithmetic_consistency`.
+- For a complete 64-image test, there are **320 question-answer pairs**.
+- Expected answers are reconstructed from the generator and used **only for evaluation**; neither OCR nor VLM receives labels, answer keys, edit bounding boxes, or the manifest as input.
+- The baseline and VLM receive the **same JPG images**. The baseline uses Tesseract (PSM 6) and field rules; the VLM receives the image plus a fixed five-field JSON instruction.
 
-**OCR baseline:** Installed Tesseract (PSM 6), field-specific regular expressions and the independent Decimal subtotal+tax verifier. Package: `multimodal/ocr_baseline.py`.
+## Pretrained model and inference
 
-**Pretrained VLM candidate:** `HuggingFaceTB/SmolVLM2-500M-Video-Instruct` using Hugging Face Transformers, on-device in the same Python process (no localhost server). The small 500M model is chosen as a resource-aware feasibility baseline, not as an OCR quality leader. A larger model may give better text recognition but demands more GPU memory. This version requires an **initial Hugging Face model download**; inference can run offline after caching.
+VLM: [HuggingFaceTB/SmolVLM2-500M-Video-Instruct](https://huggingface.co/HuggingFaceTB/SmolVLM2-500M-Video-Instruct), Apache 2.0. Its model weights are downloaded into the local Hugging Face cache on the first run and **are not bundled in this repository**. No model fine-tuning or LoRA training has been performed.
 
-### Windows commands (Python 3.14)
-
-Existing desktop and OCR baseline:
+Run from the repository root on Windows using a Python 3.14 virtual environment:
 
 ```powershell
-cd D:\FraudFlow-Vision-Multimodal-Lab
-py -3.14 -m pip install -r requirements.txt
-py -3.14 -m multimodal.evaluate --method ocr --split test
+py -3.14 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install --upgrade pip
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+
+# Tesseract OCR must also be installed locally.
+.\.venv\Scripts\python.exe -m multimodal.evaluate --method ocr --split test
+
+# CPU example; use corresponding PyTorch GPU wheels if compatible GPU available.
+.\.venv\Scripts\python.exe -m pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+.\.venv\Scripts\python.exe -m pip install -r requirements-vlm.txt
+.\.venv\Scripts\python.exe -m multimodal.evaluate --method vlm --split test --limit 2
+.\.venv\Scripts\python.exe -m multimodal.evaluate --method vlm --split test --limit 10
 ```
 
-Optional VLM: **Only if your Python/PyTorch/Transformers build supports your Windows machine.** This was not executable/verified on the user's Windows laptop at packaging time.
+These commands can download approximately 2 GB of model weights and may be slow on CPU. They do not run a web server. Platform support should be checked for your Python/PyTorch build.
+
+## Measured results
+
+| Method | Split / scope | Documents | Questions | Correct | Exact match |
+|---|---|---:|---:|---:|---:|
+| Tesseract OCR + field rules | Synthetic held-out test | 64 | 320 | 320 | **100%** |
+| Tesseract OCR + field rules | 10-image pilot subset | 10 | 50 | 50 | **100%** |
+| Pretrained SmolVLM2-500M | Same 10-image pilot subset | 10 | 50 | 40 | **80%** |
+| Pretrained SmolVLM2-500M | Full held-out test | 64 | 320 | **Not run** | **Not measured** |
+| SmolVLM2 + LoRA | — | — | — | **Not run** | **Not measured** |
+
+The **10-image pilot** values were observed in actual Windows evaluation runs and reported by the project operator. The VLM pilot output is generated locally at `reports/multimodal/vlm_test_10.json`; it is not included in the distributed project archive. Preserve and include that measured JSON when presenting a reproducible 10-image experiment; do not fabricate per-field predictions.
+
+The 20-percentage-point pilot difference is exploratory. The test is small, synthetic, legible and templated; the OCR baseline uses template-aware field parsing. **Neither result measures detection of genuine financial fraud or generalization to real-world documents.**
+
+## Fair full-set comparison
+
+For a fair 64-image comparison, run both methods on the entire same held-out set, then analyze per-field accuracy, answer coverage, latency, and errors:
 
 ```powershell
-py -3.14 -m pip install torch
-py -3.14 -m pip install -r requirements-vlm.txt
-py -3.14 -m multimodal.evaluate --method vlm --split test --limit 2
-py -3.14 -m multimodal.evaluate --method vlm --split test
+.\.venv\Scripts\python.exe -m multimodal.evaluate --method vlm --split test
+.\.venv\Scripts\python.exe -m multimodal.compare --ocr reports/multimodal/ocr_test_64.json --vlm reports/multimodal/vlm_test_64.json
 ```
 
-The first VLM command downloads weights from Hugging Face (internet required). CPU inference can be very slow. Check NVIDIA GPU with `nvidia-smi`. If no appropriate PyTorch wheel is available for Python 3.14, use a **separate** compatible Python environment solely for the optional VLM; do not replace or break the offline desktop installation.
+The interactive **Multimodal Comparison** tab can also compare the two measured JSON files on their **shared image IDs only**; it never infers missing VLM results. See [Visual Comparison](VISUAL_COMPARISON.md) and [LoRA proposal](LORA_PROTOCOL.md).
 
-After both full 64-image runs:
+## Limitations and next steps
 
-```powershell
-py -3.14 -m multimodal.compare --ocr reports/multimodal/ocr_test_64.json --vlm reports/multimodal/vlm_test_64.json
-```
-
-## Results
-
-The measured OCR baseline run is saved at `reports/multimodal/ocr_test_64.json` (and errors CSV). It obtained 320/320 exact matches on the simple bundled **synthetic** labels in this environment. This **does not** mean OCR is 100% on real-world invoices or that the benchmark is difficult; it reflects narrow generated layouts and excellent legibility. Model comparisons must use the same held-out test images.
-
-| System | Test documents | Question answers | Exact-match score | Status |
-|---|---:|---:|---:|---|
-| Tesseract + regex + arithmetic | 64 | 320 | 100% | Measured on bundled synthetic test |
-| SmolVLM2-500M (pretrained) | — | — | **Not measured** | Requires download and runnable VLM environment |
-| SmolVLM2 + LoRA | — | — | **Not measured** | Future controlled training; depends on GPU |
-
-### Key limitations
-
-This VQA task tests readable printed fields and arithmetic, **not** manipulation history or actual fraud; a fully altered but internally consistent receipt may be indistinguishable without external provenance. Synthetic receipt formatting can make OCR+rules unrealistically strong; adding external licensed real-image evaluation and new template families is necessary for meaningful generalization. Test images should not influence prompts or threshold/model selection after results are seen.
-
-## Future improvements
-
-- External document test set with licenses and true manually checked field annotations.
-- Add unknown vendors, alternate layouts, handwritten totals, camera noise, smartphone photos.
-- Field-level numeric tolerance analysis and per-category errors.
-- Compare a larger document-capable VLM under matched image resolutions, latency/hardware reporting.
-- Conduct LoRA experiment using training + validation only and compare with identical evaluation; see `docs/LORA_PROTOCOL.md`.
+- The fixed templates create an unrealistically easy OCR task; add appropriately licensed diverse document images with independently checked labels.
+- The VLM has not been fine-tuned. A LoRA/QLoRA training run would require compatible accelerator resources, isolated training/validation data, and a fresh held-out comparison.
+- Dates and payment references can be altered without changing arithmetic consistency; VQA accuracy and tampering-screening accuracy are different metrics.
+- Do not optimize prompts or hyperparameters against the held-out test labels; retain and disclose model and configuration versions.

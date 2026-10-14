@@ -5,3 +5,8 @@ accelerate>=1.0
 safetensors>=0.5
 huggingface-hub>=0.30
 Pillow>=11.2,<14
+
+# Required for the SmolVLM2 processor and image transforms.
+# Install a compatible torch + torchvision pair from the same PyTorch wheel index first.
+torchvision
+num2words

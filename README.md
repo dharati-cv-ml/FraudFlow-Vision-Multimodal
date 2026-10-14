@@ -1,6 +1,6 @@
-# FraudFlow Vision — Explainable Receipt & Invoice Alteration Screening
+# FraudFlow Vision — Document Forensics & Multimodal VQA
 
-**Offline Python desktop application | Document imagery + visual ML + optional local OCR arithmetic verification**
+**Windows desktop application | Computer Vision + Tesseract OCR + pretrained SmolVLM2 VQA evaluation**
 
 FraudFlow Vision demonstrates an end-to-end **synthetic document alteration screening** workflow. Browse 320 fictional receipt and invoice images, compare two independent signals (visual patch-artifact screening and OCR subtotal/tax/total consistency), inspect a suggested visual region, and review transparent, held-out evaluation results and error cases.
 
@@ -21,19 +21,53 @@ FraudFlow Vision demonstrates an end-to-end **synthetic document alteration scre
 ![Held-out test false-positive and false-negative examples](screenshots/error-analysis.png)
 
 
-## Optional multimodal research experiment (OCR vs Vision-Language Model)
+## Multimodal research: Tesseract OCR vs SmolVLM2
 
-A new **document visual question answering** benchmark compares local Tesseract OCR + field rules against an optional pretrained local SmolVLM2-500M vision-language model on five questions per image: document type, date, total, payment reference and arithmetic consistency. The **64-image synthetic held-out test** has 320 answer targets; generated truth is never passed to inference.
+**Research question:** How does a deterministic Tesseract OCR + field-rule baseline compare with a pretrained vision-language model (VLM) on fixed questions about synthetic receipts and invoices?
 
-The OCR baseline has been executed and reached **320/320 exact matches on the highly regular synthetic test**. The pretrained VLM and optional LoRA have **not yet been executed or measured**; do not claim a VLM performance result until the weights are downloaded and evaluated. This experiment evaluates reading/comprehension, **not actual financial fraud**.
+The VQA benchmark asks **five questions per image**: document type, date, printed total, payment reference, and subtotal-plus-tax arithmetic consistency. The expected answers are derived from the **synthetic document generator**, never supplied to either inference method. Both methods use the same image files; the VLM receives image-plus-text questions, while the OCR baseline parses recognized text with field rules.
 
-Start with:
+### Measured results (distinct experiments)
+
+| Experiment | Documents | Question answers | Exact match |
+|---|---:|---:|---:|
+| Tesseract OCR, full synthetic held-out set | 64 | 320 | **320/320 (100%)** |
+| Tesseract OCR, 10-image pilot subset | 10 | 50 | **50/50 (100%)** |
+| Pretrained SmolVLM2-500M, same 10-image pilot subset | 10 | 50 | **40/50 (80%)** |
+
+**Interpretation:** The **20-percentage-point difference** is an *exploratory observation on only 10 highly regular synthetic images*, not a full-benchmark conclusion. The VLM has **not yet been evaluated on all 64 held-out images**. The Tesseract system uses dataset-specific extraction rules and is particularly well suited to these templates. Neither test measures real-world fraud detection, and **LoRA fine-tuning has not been performed**.
+
+For a publishable 64-image comparison, run both methods on the full matching test set and report per-question errors, latency, and uncertainty. The program does not invent missing VLM results.
+
+### Interactive desktop comparison
+
+The **Multimodal Comparison** tab reads saved OCR and VLM result JSON files. It displays:
+
+- The selected source receipt/invoice image.
+- Five questions with **ground truth, OCR answer, and SmolVLM2 answer** side by side.
+- Green/red correctness indicators, raw predictions, and per-question accuracy summaries.
+- A filter for VLM errors, larger image viewing, and CSV export.
+
+The tab evaluates **shared document IDs** only (e.g., 10 VLM documents against those same 10 OCR documents). **It does not rerun or download the VLM when you open it.**
+
+![Multimodal Comparison application tab](screenshots/multimodal-comparison.png)
+
+*Screenshot from the packaged sample, captured before the local VLM result JSON was imported. Any “NOT RUN” indicator in this screenshot is intentional; actual VLM predictions live in the user's measured `reports/multimodal/vlm_test_10.json` file and are not bundled in the release archive.*
+
+Run and reproduce the experiments:
 
 ```powershell
-py -3.14 -m multimodal.evaluate --method ocr --split test
+# Compare OCR on all 64 held-out synthetic documents
+.\.venv\Scripts\python.exe -m multimodal.evaluate --method ocr --split test
+
+# Start with a small VLM trial; downloads model weights on first run
+.\.venv\Scripts\python.exe -m multimodal.evaluate --method vlm --split test --limit 2
+
+# Run full VLM benchmark when compute/time permits
+.\.venv\Scripts\python.exe -m multimodal.evaluate --method vlm --split test
 ```
 
-See [`docs/VLM_STUDY.md`](docs/VLM_STUDY.md) for reproducible commands and [`docs/LORA_PROTOCOL.md`](docs/LORA_PROTOCOL.md) for a compute-dependent, not-yet-run fine-tuning plan. Existing GUI and visual model functionality are unchanged.
+See [VLM study protocol](docs/VLM_STUDY.md), [comparison GUI guide](docs/VISUAL_COMPARISON.md), and [LoRA proposal — not executed](docs/LORA_PROTOCOL.md). The visual classifier and the optional VLM are **separate systems for separate tasks**: alteration screening vs document question answering.
 
 ## Implemented features
 
@@ -46,7 +80,7 @@ See [`docs/VLM_STUDY.md`](docs/VLM_STUDY.md) for reproducible commands and [`doc
 - **Analytics Dashboard:** Score histogram and counts across bundled samples; visual model scores are **uncalibrated**, not financial fraud probabilities.
 - **Dataset Explorer and Error Analysis:** Search/filter records, inspect known synthetic ground truth, and browse false positives/false negatives from the held-out **visual model** test set.
 - **Model & Evaluation:** Train/validation/test protocol, confusion matrix, separate visual-only and OCR-assisted evaluations, plus machine-readable reports.
-- **Engineering:** Python `unittest`, GitHub Actions CI, model persistence, CSV export, offline command-line evaluation. No localhost, external server, OpenAI API or network required.
+- **Engineering:** Python `unittest`, GitHub Actions CI, model persistence, CSV export, and offline visual-model evaluation. The optional pretrained VLM requires a model download on first use, but the desktop GUI needs no localhost, external server, or OpenAI API.
 
 ## Two complementary inspection signals
 
@@ -110,17 +144,32 @@ Reproducible output files: [`reports/evaluation.json`](reports/evaluation.json),
 
 ## Run on Windows (Python 3.14)
 
-Extract the ZIP so `README.md` is located inside `D:\FraudFlow-Document-Forensics-Verified` and run:
+Clone or open this repository in a folder of your choice. The following commands use `D:\FraudFlow-Vision-Multimodal-Lab` as an example:
 
 ```powershell
-cd D:\FraudFlow-Document-Forensics-Verified
-py -3.14 -m pip install -r requirements.txt
-py -3.14 -m fraudvision.desktop
+cd D:\FraudFlow-Vision-Multimodal-Lab
+py -3.14 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install --upgrade pip
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe -m fraudvision.desktop
 ```
 
-Alternatively, double-click `RUN_WINDOWS.bat`. **No browser/localhost required.** Pillow is the sole pip dependency; Tkinter normally ships with the python.org Windows installer.
+The **desktop inspection application does not require a browser, localhost, cloud API, GPU, or downloaded VLM weights**. Python's Tkinter usually ships with the python.org Windows installation. Alternatively run `RUN_WINDOWS.bat` if it matches your Python setup.
 
-**Optional OCR:** Install [Tesseract OCR](https://github.com/tesseract-ocr/tesseract), with `tesseract.exe` available on PATH or at `C:\Program Files\Tesseract-OCR\tesseract.exe`. Select an image and click **Verify totals (OCR)**. Click **Extract OCR text** for the recognized text. Other features operate when OCR is unavailable.
+**Optional OCR:** Install [Tesseract OCR](https://github.com/tesseract-ocr/tesseract), with `tesseract.exe` on your `PATH` or at `C:\Program Files\Tesseract-OCR\tesseract.exe`. The app's OCR and arithmetic verification controls require Tesseract; all other desktop inspection features work without it.
+
+**Optional pretrained VLM (separate dependencies):** The multimodal experiment requires PyTorch, TorchVision, Transformers, `num2words`, and other packages from `requirements-vlm.txt`. This example installs compatible **CPU** builds from the official PyTorch wheel index:
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+.\.venv\Scripts\python.exe -m pip install -r requirements-vlm.txt
+.\.venv\Scripts\python.exe -m pip install num2words
+
+# Run VLM on two held-out examples first
+.\.venv\Scripts\python.exe -m multimodal.evaluate --method vlm --split test --limit 2
+```
+
+The VLM downloads pretrained model weights from [Hugging Face](https://huggingface.co/HuggingFaceTB/SmolVLM2-500M-Video-Instruct) on the first run (about 2 GB in the observed run). CPU inference can be slow. This model download is **not included in the repository**, and the optional VLM experiment is not an offline-first feature until the model is cached locally. For GPU use, choose compatible packages from the [official PyTorch installation guide](https://pytorch.org/get-started/locally/).
 
 ### Five-minute desktop tour
 
@@ -154,18 +203,29 @@ Retraining should also regenerate `data/demo_predictions.csv` before sharing new
 ## Project structure
 
 ```text
-fraudvision/                  Offline generator, image features, logistic model,
-                              optional OCR checks, GUI, audit and CLI
-screenshots/                  Actual captured Windows-style application screens
-data/images/                 320 bundled synthetic JPGs
-data/manifest.csv            Ground-truth edit labels and bounding boxes (evaluation only)
-data/demo_predictions.csv    Cached visual inference outputs
-models/demo_model.json      Bundled visual screening model
-reports/                     Visual and OCR-assisted evaluations + error analysis
+fraudvision/                  Image generator, handcrafted visual features,
+                              logistic classifier, OCR checks, GUI, audit and CLI
+multimodal/                   VQA answer key, OCR baseline, pretrained VLM runner,
+                              comparison and evaluation scripts
+screenshots/                  Captured desktop screens, including comparison tab
+data/images/                 320 bundled synthetic JPG documents
+data/manifest.csv            Ground-truth labels and bounding boxes (evaluation only)
+data/demo_predictions.csv    Cached visual classifier outputs
+models/demo_model.json      Bundled trained visual classifier
+reports/                     Visual screening, OCR auditing, and VQA evaluations
+reports/multimodal/          Saved OCR/VLM runs (VLM pilot JSON generated locally)
+docs/                        Dataset, model, benchmark and LoRA documentation
 tests/                       unittest suite
 .github/workflows/ci.yml    GitHub Actions automated tests
 RUN_WINDOWS.bat             Windows desktop launcher
 ```
+
+## Third-party models and licenses
+
+- **[SmolVLM2-500M-Video-Instruct](https://huggingface.co/HuggingFaceTB/SmolVLM2-500M-Video-Instruct)** — pretrained vision-language model by Hugging Face; distributed under **Apache License 2.0**. The checkpoint is downloaded separately and its weights are not included here. Refer to the model card for its intended use and limitations.
+- **[Tesseract OCR](https://github.com/tesseract-ocr/tesseract)** — optional OCR engine, **Apache License 2.0**; installed separately.
+- **[Pillow](https://python-pillow.github.io/)** — image handling and rendering; subject to its own license.
+- The original project source is distributed under this repository's **[MIT license](LICENSE)**. Third-party licenses continue to apply to their respective components.
 
 ## Responsible use / technical boundaries
 
@@ -174,7 +234,7 @@ RUN_WINDOWS.bat             Windows desktop launcher
 - The OCR check only tests one arithmetic relation and cannot verify dates, references, identities, business provenance, or source-of-truth transactions.
 - OCR errors can produce an unreadable result or a false mismatch; a human should inspect the actual source image.
 - The images, company names and invoices are fictional; no third-party personal documents are included.
-- Tesseract and Pillow have their own licenses. Original demo source is distributed under the included MIT license.
+- Tesseract, Pillow, PyTorch, and the pretrained VLM are third-party components with their own licenses; see attribution above.
 
 See [`docs/DATA_CARD.md`](docs/DATA_CARD.md), [`docs/MODEL_CARD.md`](docs/MODEL_CARD.md) and [`docs/RECRUITER_WALKTHROUGH.md`](docs/RECRUITER_WALKTHROUGH.md) for details.
 
